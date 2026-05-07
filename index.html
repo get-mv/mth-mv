@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light only" />
+<title>MT Højgaard Maldives — Marine & Coastal Infrastructure</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAgACADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAABQcIBAb/xAApEAABAwMEAQQBBQAAAAAAAAABAgMEBQYHABESIQgTFDFRQVJhgZHR/8QAFwEBAQEBAAAAAAAAAAAAAAAAAgAFBv/EACURAAEDAwMDBQAAAAAAAAAAAAECAwQAETESMmETIUFRcaHh8P/aAAwDAQACEQMRAD8AP+c93V2m1qg29S6tMgxnIi5MhEd5Tfqkr4pCuJG4HE9H70gsT2g/kbIEG2nKoYi5YcUqS4n1CkIQVHokbnr71SXlJZ9m1/IMKfdWRYduBqmobTEMZTry081nkOwADuR/GsuHMK4nuBb1Utq8LmqTkBxKVyo6/aBKyN9kqCN99vnY9bjXQMSG2YotcG2beaxnmFuyDfuPS9Tjky2ZGP7+qNttVNUlcFYSJLYLZUCkH43O3z96pDwYu6uVc3FQqvVZc9mM2y/G9y8pwtblSVBJUSQOk9fGiuSqDgXGdTiKvCh1KpzailTqXpDjktbnEgEqKl/PY102BLvxHXq9Pp+OrbFKmNRfVkO+wQzzb5gbcgST2R0dCTJ60bYTzamwx0n9wHFJDzkjvycv0ePHaW689S2m2kJG5WouuAAD8kk66/IlyN4CxNRLBt51s3JOQJM95Cu299vUWCOwSRxSfpJ+tMrLFpRm8gwMpT4T1Sj27SnCzBjtFx16UFlTWyQD0ORO/wCCAdRHfs+57kuqoV64Yk0TZbylrDjSwGxv0hIPwlI6A+hpxAJCEJO1OeT9UJBLClKGVY9qe3no+iTV7OktHdt2C+tJ/YqQRrN4Dt739cDv6aWE/wBup/zQvyOFSuOzsVyokGVLect8BxLLSlnmA2FdAfYOmJ4P2TcFBTcFcrtImU1EtDLEZMplTS1hJUpSglQB49p7/OpZCIGknvj5qSCuZqA/Wr//2Q==">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet" />
+<style>
+/* ═══════════════════════════════════════════════════════
+   ROOT & BRAND TOKENS
+═══════════════════════════════════════════════════════ */
+:root {
+  color-scheme: light only;
+  --mth-primary-blue: #003366;
+  --mth-white: #ffffff;
+  --mth-grey-light: #f4f4f4;
+  --mth-grey-footer: #1a1a1a;
+  --font-main: 'Inter', 'Roboto', 'Open Sans', sans-serif;
+  --line-height-body: 1.6;
+  --section-padding: 80px 0;
+  --transition-speed: 300ms ease-in-out;
+  --border-radius-sm: 4px;
+
+  /* Internal component tokens */
+  --brand: var(--mth-primary-blue);
+  --brand-dark: #001e44;
+  --brand-mid: #0047a0;
+  --accent: #B8923A;
+  --accent-light: #d4b07a;
+  --white: var(--mth-white);
+  --off-white: var(--mth-grey-light);
+  --text: #1c1c1e;
+  --text-muted: #5a6475;
+  --border: #dde3ec;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-main);
+  line-height: var(--line-height-body);
+  color: var(--text);
+  background: var(--white);
+  font-size: 16px;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-main);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
+p { line-height: var(--line-height-body); color: var(--text-muted); }
+
+.container { max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 60px); }
+
+/* ═══════════════════════════════════════════════════════
+   NAV — minimal, 5 items
+═══════════════════════════════════════════════════════ */
+#navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: transparent;
+  transition: background var(--transition-speed), box-shadow var(--transition-speed);
+}
+#navbar.scrolled {
+  background: rgba(0, 20, 50, 0.97);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(20px, 5vw, 60px);
+  height: 68px;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 11px;
+  text-decoration: none; flex-shrink: 0;
+}
+.nav-logo-mark {
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+.nav-logo-text .top {
+  font-family: var(--font-main);
+  font-size: 0.92rem; font-weight: 800;
+  letter-spacing: -0.02em; text-transform: uppercase;
+  color: var(--white);
+}
+.nav-logo-text .sub {
+  font-size: 0.62rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--accent-light);
+  font-weight: 400;
+}
+
+.nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+.nav-links a {
+  font-family: var(--font-main);
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: -0.01em; text-transform: uppercase;
+  color: rgba(255,255,255,0.75); text-decoration: none;
+  padding: 8px 14px; position: relative;
+  transition: color var(--transition-speed);
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 3px; left: 14px; right: 14px;
+  height: 1px; background: var(--accent);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-cta {
+  background: var(--accent) !important; color: var(--brand-dark) !important;
+  padding: 8px 18px !important; border-radius: var(--border-radius-sm);
+  font-weight: 700 !important;
+}
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { background: var(--accent-light) !important; color: var(--brand-dark) !important; }
+
+/* Hamburger */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; }
+.hamburger span { width: 22px; height: 2px; background: var(--white); border-radius: 2px; display: block; transition: all 0.3s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none; position: fixed; top: 68px; left: 0; right: 0;
+  background: rgba(0, 20, 50, 0.98); backdrop-filter: blur(16px);
+  z-index: 999; flex-direction: column;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  color: rgba(255,255,255,0.8); text-decoration: none;
+  padding: 15px clamp(20px, 5vw, 60px);
+  font-size: 0.85rem; font-weight: 700;
+  letter-spacing: -0.01em; text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color 0.2s, background 0.2s;
+}
+.mobile-menu a:hover { color: var(--accent); background: rgba(255,255,255,0.03); }
+
+/* ═══════════════════════════════════════════════════════
+   HERO — Full-screen authority statement
+═══════════════════════════════════════════════════════ */
+#home {
+  min-height: 100vh;
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: flex-end;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(160deg, #001228 0%, #002050 40%, #003878 80%, #001e44 100%);
+}
+/* Architectural grid overlay */
+.hero-grid-overlay {
+  position: absolute; inset: 0; z-index: 1; opacity: 0.035;
+  background-image:
+    linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+/* Diagonal accent band */
+.hero-diagonal {
+  position: absolute; z-index: 2;
+  top: 0; right: -10%;
+  width: 55%; height: 100%;
+  background: linear-gradient(to bottom left, rgba(0,71,160,0.18) 0%, transparent 65%);
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+}
+/* Gold accent line left */
+.hero-accent-bar {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 4px; z-index: 3;
+  background: linear-gradient(to bottom, var(--accent) 0%, rgba(184,146,58,0.2) 60%, transparent 100%);
+}
+/* Photo placeholder — full bleed */
+.hero-photo {
+  position: absolute; inset: 0; z-index: 1;
+  overflow: hidden;
+}
+.hero-photo svg,
+.hero-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center center;
+  display: block;
+}
+/* Heavy gradient overlay */
+.hero-overlay {
+  position: absolute; inset: 0; z-index: 2;
+  background:
+    linear-gradient(to bottom,
+      rgba(0,15,40,0.55) 0%,
+      rgba(0,20,55,0.50) 30%,
+      rgba(0,15,45,0.80) 60%,
+      rgba(0,10,35,0.97) 100%);
+}
+/* Wave separator */
+.hero-wave {
+  position: absolute; bottom: -2px; left: 0; right: 0; z-index: 5;
+}
+.hero-wave svg { width: 100%; display: block; }
+
+.hero-content {
+  position: relative; z-index: 4;
+  padding: clamp(130px, 14vw, 180px) clamp(20px, 5vw, 80px) clamp(90px, 11vw, 140px);
+  max-width: 1180px; margin: 0 auto; width: 100%;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(184,146,58,0.12); border: 1px solid rgba(184,146,58,0.3);
+  padding: 6px 16px; border-radius: 2px; margin-bottom: 28px;
+}
+.hero-tag-dot { width: 5px; height: 5px; background: var(--accent); border-radius: 50%; }
+.hero-tag span {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--accent);
+}
+.hero-content h1 {
+  color: var(--white); max-width: 780px;
+  margin-bottom: 22px; font-weight: 900;
+  text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+}
+.hero-content h1 em { font-style: normal; color: var(--accent); }
+.hero-sub {
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  color: rgba(255,255,255,0.65);
+  max-width: 520px; margin-bottom: 16px;
+  line-height: 1.75; font-weight: 300;
+}
+.hero-disciplines {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 40px; margin-top: 6px;
+}
+.hero-discipline {
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  padding: 5px 14px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 2px;
+  background: rgba(0,30,70,0.3);
+}
+.hero-discipline.accent { border-color: rgba(184,146,58,0.35); color: var(--accent); background: rgba(184,146,58,0.08); }
+
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--accent); color: var(--brand-dark);
+  padding: 16px 36px; font-weight: 800; font-size: 0.85rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border: none; cursor: pointer; text-decoration: none;
+  border-radius: var(--border-radius-sm);
+  transition: background var(--transition-speed), transform 0.15s;
+}
+.hero-cta:hover { background: var(--accent-light); transform: translateY(-2px); }
+.hero-cta svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+/* Stats band */
+#hero-stats {
+  background: var(--off-white);
+  border-top: 3px solid var(--accent);
+}
+.hero-stats-inner {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  max-width: 1180px; margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 60px);
+}
+.hero-stat {
+  text-align: center; padding: 26px 20px;
+  border-right: 1px solid var(--border);
+}
+.hero-stat:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--font-main);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800; color: var(--accent);
+  letter-spacing: -0.03em;
+  line-height: 1; display: block;
+}
+.stat-lbl {
+  font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--text-muted); margin-top: 6px; display: block;
+}
+
+/* ═══════════════════════════════════════════════════════
+   HOME PREVIEWS — three service entry cards
+═══════════════════════════════════════════════════════ */
+#home-previews {
+  background: var(--off-white);
+  padding: var(--section-padding);
+}
+.preview-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.preview-card {
+  display: flex; flex-direction: column; gap: 14px;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--border-radius-sm);
+  padding: 32px 28px;
+  text-decoration: none; color: inherit;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed), border-color var(--transition-speed);
+  position: relative; overflow: hidden;
+}
+.preview-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--accent); transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.preview-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,51,102,0.12); border-color: transparent; }
+.preview-card:hover::before { transform: scaleX(1); }
+.preview-card-icon {
+  display: flex; align-items: center; justify-content: flex-start;
+}
+.preview-card-label {
+  font-size: 0.66rem; font-weight: 800; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--accent);
+}
+.preview-card h3 { font-size: 1.05rem; color: var(--text); line-height: 1.25; }
+.preview-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; margin: 0; flex: 1; }
+.preview-card-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.76rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--brand);
+  margin-top: 4px;
+  transition: gap 0.2s;
+}
+.preview-card:hover .preview-card-cta { gap: 12px; }
+.preview-card-cta svg { width: 13px; height: 13px; }
+@media (max-width: 960px) {
+  .preview-grid { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   SOLUTIONS — Three capability pillars
+═══════════════════════════════════════════════════════ */
+#solutions {
+  background: var(--white);
+  padding: var(--section-padding);
+}
+.section-header { margin-bottom: clamp(48px, 6vw, 72px); }
+.section-header.centered { text-align: center; }
+.eyebrow {
+  display: inline-block;
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 14px;
+}
+.eyebrow-white { color: var(--accent-light); }
+.section-header h2 { color: var(--text); margin-bottom: 12px; }
+.section-header p { color: var(--text-muted); max-width: 560px; font-size: 1.05rem; }
+
+/* Capability cards */
+.solutions-stack { display: flex; flex-direction: column; gap: 3px; }
+.solution-panel {
+  display: grid; grid-template-columns: 280px 1fr;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transition-speed);
+}
+.solution-panel:hover { box-shadow: 0 8px 40px rgba(0,51,102,0.10); }
+.solution-panel-num {
+  background: var(--brand);
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  padding: 36px 32px;
+  position: relative; overflow: hidden;
+}
+.solution-panel-num::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: var(--accent);
+}
+.sol-num {
+  font-size: 4rem; font-weight: 900;
+  color: rgba(184,146,58,0.15); line-height: 1;
+  letter-spacing: -0.04em;
+}
+.sol-icon {
+  width: 48px; height: 48px;
+  background: rgba(184,146,58,0.12);
+  border: 1px solid rgba(184,146,58,0.25);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+.sol-icon svg { width: 24px; height: 24px; fill: var(--accent); }
+.solution-panel-body {
+  padding: 36px 40px;
+  background: var(--white);
+  display: flex; flex-direction: column; gap: 16px;
+}
+.solution-panel-body h3 { color: var(--text); font-size: 1.3rem; }
+.solution-panel-body > p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+.solution-features {
+  display: flex; flex-direction: column; gap: 0;
+  border-top: 1px solid var(--border); padding-top: 20px;
+  margin-top: 4px;
+}
+.solution-feature {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.solution-feature:last-child { border-bottom: none; padding-bottom: 0; }
+.feature-bullet {
+  width: 20px; height: 20px;
+  background: var(--accent);
+  border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 2px;
+}
+.feature-bullet svg { width: 11px; height: 11px; fill: var(--brand-dark); }
+.solution-feature strong { display: block; font-size: 0.88rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.solution-feature span { font-size: 0.83rem; color: var(--text-muted); line-height: 1.5; }
+
+/* Process strip for Turnkey */
+.process-strip {
+  display: flex; align-items: center; gap: 0;
+  background: var(--off-white);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  margin-top: 4px;
+}
+.process-step {
+  flex: 1; padding: 14px 16px; text-align: center;
+  position: relative;
+}
+.process-step::after {
+  content: '›'; position: absolute; right: -8px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent); font-size: 1.2rem; font-weight: 700; z-index: 1;
+}
+.process-step:last-child::after { display: none; }
+.process-step .step-label {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--brand);
+  display: block; margin-bottom: 2px;
+}
+.process-step .step-desc { font-size: 0.76rem; color: var(--text-muted); }
+
+/* ═══════════════════════════════════════════════════════
+   PROJECTS — 4 case studies
+═══════════════════════════════════════════════════════ */
+#projects {
+  background: var(--off-white);
+  padding: var(--section-padding);
+}
+#projects .section-header p { max-width: 480px; }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.project-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--border-radius-sm); overflow: hidden;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.project-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,51,102,0.13); }
+.project-card.featured {
+  grid-column: span 2;
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+.project-img {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 ratio */
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-mid) 100%);
+  position: relative; overflow: hidden;
+}
+.project-img img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  display: block;
+}
+.project-card.featured .project-img {
+  padding-top: 0; min-height: 280px; height: 100%;
+}
+.project-img-placeholder {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.project-img-placeholder svg { width: 40px; height: 40px; fill: rgba(255,255,255,0.1); }
+.project-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,20,50,0.75) 0%, transparent 50%);
+}
+.project-cat-tag {
+  position: absolute; top: 14px; left: 14px;
+  background: var(--accent); color: var(--brand-dark);
+  font-size: 0.62rem; font-weight: 800; letter-spacing: 0.14em;
+  text-transform: uppercase; padding: 4px 10px;
+  border-radius: 2px;
+}
+.project-body {
+  padding: 22px 24px;
+}
+.project-card.featured .project-body {
+  padding: 32px 36px; display: flex; flex-direction: column; justify-content: center; gap: 12px;
+}
+.project-body h3 { color: var(--text); font-size: 1.05rem; margin-bottom: 6px; }
+.project-card.featured .project-body h3 { font-size: 1.3rem; margin-bottom: 8px; }
+.project-loc {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.78rem; color: var(--text-muted); font-weight: 500;
+}
+.project-loc svg { width: 13px; height: 13px; fill: var(--accent); flex-shrink: 0; }
+.project-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; margin: 0; }
+.project-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.project-tag {
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--brand);
+  padding: 4px 10px; background: rgba(0,51,102,0.06);
+  border-radius: 2px;
+}
+.project-tag-precast { color: var(--accent); background: rgba(184,146,58,0.09); }
+.project-tag-turnkey { color: var(--brand-mid); background: rgba(0,71,160,0.08); }
+.project-tag-repair { color: #2d7a3a; background: rgba(45,122,58,0.08); }
+
+/* ═══════════════════════════════════════════════════════
+   PRECAST — Dedicated flagship section
+═══════════════════════════════════════════════════════ */
+#precast {
+  background: var(--off-white);
+  padding: var(--section-padding);
+}
+#precast .section-header h2,
+#precast .section-header p { color: var(--text); }
+#precast .section-header p { color: var(--text-muted); }
+#precast .precast-badge { background: rgba(184,146,58,0.12); border: 1px solid rgba(184,146,58,0.35); color: var(--accent); }
+#precast .precast-text > p { color: var(--text-muted); }
+#precast .precast-text h4 { color: var(--brand-dark) !important; }
+#precast .benefit-row { background: var(--white); border-left: 3px solid transparent; }
+#precast .benefit-row:hover { border-left-color: var(--accent); background: #edf1f8; }
+#precast .benefit-num { color: var(--accent); }
+#precast .benefit-text h4 { color: var(--text); }
+#precast .benefit-text p { color: var(--text-muted); }
+#precast .product-card { border-color: var(--border); background: var(--white); }
+#precast .product-card:hover { box-shadow: 0 6px 24px rgba(0,51,102,0.1); border-color: rgba(184,146,58,0.4); }
+#precast .product-info h4 { color: var(--text); }
+#precast .product-info p { color: var(--text-muted); }
+.precast-layout {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px); align-items: start;
+}
+.precast-text h2 { color: var(--text); margin-bottom: 20px; }
+.precast-text > p { margin-bottom: 30px; }
+.precast-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--brand); color: var(--white);
+  padding: 10px 18px; border-radius: var(--border-radius-sm); margin-bottom: 30px;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.precast-badge svg { width: 14px; height: 14px; fill: var(--accent); }
+.precast-benefits { display: flex; flex-direction: column; gap: 1px; }
+.benefit-row {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 14px 16px; background: var(--off-white);
+  border-left: 3px solid transparent;
+  transition: border-color var(--transition-speed), background var(--transition-speed);
+}
+.benefit-row:hover { border-left-color: var(--accent); background: #edf1f8; }
+.benefit-num {
+  font-family: var(--font-main);
+  font-size: 1.3rem; font-weight: 800; color: var(--brand);
+  min-width: 28px; letter-spacing: -0.03em;
+}
+.benefit-text h4 { font-family: var(--font-main); font-size: 0.88rem; font-weight: 700; color: var(--text); }
+.benefit-text p { font-size: 0.82rem; color: var(--text-muted); margin: 0; }
+
+.precast-products { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.product-card {
+  display: flex; gap: 0; border: 1px solid var(--border);
+  border-radius: var(--border-radius-sm); overflow: hidden;
+  transition: box-shadow var(--transition-speed);
+}
+.product-card:hover { box-shadow: 0 6px 24px rgba(0,51,102,0.1); }
+.product-thumb {
+  width: clamp(80px, 20%, 110px); aspect-ratio: 1/1; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-mid) 100%);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.product-thumb img {
+  position: absolute; inset: 0;
+  width: 100% !important; height: 100% !important;
+  object-fit: cover; object-position: center;
+  display: block; max-width: 100%;
+}
+.product-thumb svg { width: 28px; height: 28px; fill: rgba(255,255,255,0.2); }
+.product-thumb-tag {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(0,0,0,0.5);
+  font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent); padding: 4px; text-align: center;
+}
+.product-info { padding: 16px 18px; }
+.product-info h4 { font-family: var(--font-main); font-size: 0.93rem; font-weight: 700; color: var(--text); margin-bottom: 5px; }
+.product-info p { font-size: 0.81rem; color: var(--text-muted); margin: 0; }
+
+/* ═══════════════════════════════════════════════════════
+   CONTACT — restructured
+═══════════════════════════════════════════════════════ */
+#contact {
+  background: var(--white);
+  padding: var(--section-padding);
+}
+.contact-layout {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: clamp(48px, 7vw, 96px); align-items: start;
+}
+.contact-header h2 {
+  color: var(--text); margin-bottom: 16px; font-size: clamp(1.7rem, 3vw, 2.3rem);
+}
+.contact-header > p {
+  color: var(--text-muted); font-size: 0.98rem;
+  max-width: 400px; line-height: 1.7; margin-bottom: 36px;
+}
+.credibility-bar {
+  display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 40px;
+}
+.cred-item { display: flex; flex-direction: column; gap: 2px; }
+.cred-num {
+  font-size: 1.5rem; font-weight: 800; color: var(--accent);
+  letter-spacing: -0.03em; line-height: 1;
+}
+.cred-label {
+  font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--text-muted); font-weight: 600;
+}
+
+/* Contact category cards */
+.contact-categories { display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px; }
+.contact-cat {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 20px 22px;
+  background: var(--off-white); border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  transition: background var(--transition-speed);
+}
+.contact-cat:hover { background: #edf1f8; }
+.contact-cat-icon {
+  width: 36px; height: 36px;
+  background: rgba(184,146,58,0.12); border-radius: var(--border-radius-sm);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.contact-cat-icon svg { width: 18px; height: 18px; fill: var(--accent); }
+.contact-cat h4 {
+  font-family: var(--font-main);
+  font-size: 0.82rem; font-weight: 700; letter-spacing: -0.01em;
+  text-transform: uppercase; color: var(--text); margin-bottom: 3px;
+}
+.contact-cat p { font-size: 0.83rem; color: var(--text-muted); margin: 0; }
+
+/* Address block */
+.contact-details { display: flex; flex-direction: column; gap: 12px; }
+.contact-detail { display: flex; gap: 12px; align-items: flex-start; }
+.detail-icon {
+  width: 34px; height: 34px; background: var(--off-white);
+  border-radius: var(--border-radius-sm);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.detail-icon svg { width: 15px; height: 15px; fill: var(--accent); }
+.detail-text .lbl {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.detail-text .val { font-size: 0.88rem; color: var(--text); font-weight: 500; line-height: 1.5; }
+
+/* Contact form side */
+.contact-form-wrap {
+  background: var(--off-white); border: 1px solid var(--border);
+  border-radius: var(--border-radius-sm); padding: clamp(28px, 4vw, 44px);
+}
+.contact-form-wrap h3 { color: var(--text); margin-bottom: 26px; font-size: 1.2rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.form-group:last-of-type { margin-bottom: 20px; }
+.form-group label {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.form-group input, .form-group select, .form-group textarea {
+  border: 1px solid var(--border); padding: 11px 14px;
+  font-family: var(--font-main); font-size: 0.9rem;
+  color: var(--text); background: var(--white);
+  border-radius: var(--border-radius-sm); outline: none;
+  transition: border-color var(--transition-speed);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: #aab4c2; }
+.form-group select option { background: var(--white); color: var(--text); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--accent);
+}
+.form-group textarea { resize: vertical; min-height: 100px; }
+.btn-submit {
+  width: 100%; background: var(--accent); color: var(--brand-dark);
+  padding: 14px 28px; font-weight: 800; font-size: 0.82rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  border-radius: var(--border-radius-sm);
+  transition: background var(--transition-speed), transform 0.15s;
+}
+.btn-submit:hover { background: var(--accent-light); transform: translateY(-1px); }
+
+/* ═══════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════ */
+footer {
+  background: var(--mth-grey-footer);
+  padding: 48px 0 24px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-top {
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 40px; margin-bottom: 40px;
+}
+.footer-brand p {
+  font-size: 0.85rem; color: rgba(255,255,255,0.4);
+  line-height: 1.7; max-width: 260px; margin-top: 14px;
+}
+.footer-col h4 {
+  font-family: var(--font-main);
+  font-size: 0.68rem; font-weight: 800;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul li a {
+  font-size: 0.85rem; color: rgba(255,255,255,0.45);
+  text-decoration: none; transition: color 0.2s;
+}
+.footer-col ul li a:hover { color: var(--accent); }
+.footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin-bottom: 20px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+.footer-bottom a { color: rgba(255,255,255,0.3); text-decoration: none; }
+
+/* ═══════════════════════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════════════════════ */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════ */
+@media (max-width: 960px) {
+  .solution-panel { grid-template-columns: 1fr; }
+  .solution-panel-num { flex-direction: row; align-items: center; padding: 24px 28px; }
+  .sol-num { font-size: 2.5rem; }
+  .precast-layout, .contact-layout { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .hero-stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .hero-stat:nth-child(2) { border-right: none; }
+  .project-card.featured { grid-column: span 1; display: block; }
+  .project-card.featured .project-img { aspect-ratio: 16/9; height: auto; }
+  .projects-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .footer-top { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .hero-stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .credibility-bar { gap: 20px; }
+  .process-strip { flex-direction: column; }
+  .process-step::after { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <div class="nav-logo-mark">
+        <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoACADASIAAhEBAxEB/8QAGgAAAwEAAwAAAAAAAAAAAAAAAAcIBgMEBf/EAC0QAAEDBAEDBAECBwAAAAAAAAECAwQFBgcRAAgSIRMxQVGBQqEUIiVhYnLB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwQC/8QAIxEAAgICAQQCAwAAAAAAAAAAAQMAAgQRIRIxQVEFE3GRsf/aAAwDAQACEQMRAD8AfeFcXWhbtiUhZoUGTUJERt+TJkMhxalqT3fq3rW9ePrmjyLcdtY9tCRcdWpilQY60ILcSOgrJWoJGgSke5+xzzn8oY6tmlw4lVu6mR1tR0I9NLhWrwkD2SCeKrM2cMM3bacq2Zkuv1KK8tCyunRPTUChQUNF4p+f7cuopzm9VgSNySzFqXqpAOo48b3NbORbSZuGk0taITzi0BuZGbSsFKtHYBUPj75nM34ttC4rDq7qaHBi1GLEcfjSY7IbWlSB3fp1vfbrzv34kLD6h7Ox9ajVt2tatakxWnFuJcnymwslStnYSDzirvVlXpsR+JGtSmIZfbU2v1XFqOlDXwR98org5FW9Sxob45gnLRZernZ/EesHp+w/EAW3aDLh0D3PTJDgP4U4R+3JAyBToF6ZcmUbG1CYagtqU1FajJ7UrDadrcJPxsKOz8a5VnUjkUWdiFlUJ8oqlbYDEM+CQkpSXF/hKvf7UOdLpKxabLtRdfrEcprdXQklDg8x2RvtRr4J3s/j65rHfdKy5hJPYAn9zLk0bcKoNeTEz0Q0Wj1u+K6xWaTAqTTdNC0Ilx0PJSr1UjYCgdHXK4fs20Ex3NWrQhpB1/T2vHj/AF5M3RbANKzFedMKSn+FirZ0f8ZAH/OVbXXhHok99R0GoziyfrSSeF8lcnI4PqJg1H08j3I1x7dFvZLyNSKpkOsQKXSrbgMsQ4Mlf8slwJ0Ts+NdyQo/gcrFq/7FcQFovO3tH23UmR+xVw4cpzsepsB4EDEfYV35MQ+J6zatA6mMgTXbhpLNMkxUrYkqmN+m4VKbJCVb0o734HNfmrOVh0+xavAo9ejVSqyoy47LMbagCsdpJUBoaBJ9/jhw4gxKNbU232H8mDkXWsivsz//2Q==" alt="MTH Logo" style="height:36px;width:auto;display:block;">
+      </div>
+      <div class="nav-logo-text">
+        <span class="top">MT Højgaard</span>
+        <span class="sub">Maldives</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#precast">Precast</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMenu()">Home</a>
+  <a href="#precast" onclick="closeMenu()">Precast</a>
+  <a href="#solutions" onclick="closeMenu()">Solutions</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</nav>
+
+<!-- ═══ HOME / HERO ════════════════════════════════════════ -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-diagonal"></div>
+  <div class="hero-accent-bar"></div>
+
+  <!-- Hero photo -->
+  <div class="hero-photo">
+    <img src="images/hero03_16x10.jpg" alt="Marine construction in the Maldives">
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-tag">
+      <div class="hero-tag-dot"></div>
+      <span>Maldives' Leading Marine Specialist Contractor</span>
+    </div>
+    <h1>Built for Island Conditions</h1>
+    <p class="hero-sub">Marine &amp; Coastal Infrastructure for the Maldives</p>
+    <div class="hero-disciplines">
+      <span class="hero-discipline accent">Precast Technology</span>
+      <span class="hero-discipline">Turnkey Delivery</span>
+      <span class="hero-discipline">Structural Repair</span>
+      <span class="hero-discipline">Marine Construction</span>
+    </div>
+    <a href="#precast" class="hero-cta">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.4 1.4L16.2 11H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg>
+      Discover Our Precast
+    </a>
+  </div>
+
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,36 C360,0 1080,72 1440,28 L1440,56 L0,56 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>
+
+<!-- Stats band -->
+<div id="hero-stats">
+  <div class="hero-stats-inner">
+    <div class="hero-stat reveal">
+      <span class="stat-num">79</span>
+      <span class="stat-lbl">Islands Served</span>
+    </div>
+    <div class="hero-stat reveal" style="transition-delay:0.1s">
+      <span class="stat-num">9,000+</span>
+      <span class="stat-lbl">Underwater Foundations</span>
+    </div>
+    <div class="hero-stat reveal" style="transition-delay:0.2s">
+      <span class="stat-num">32km</span>
+      <span class="stat-lbl">Revetments Constructed</span>
+    </div>
+    <div class="hero-stat reveal" style="transition-delay:0.3s">
+      <span class="stat-num">#1</span>
+      <span class="stat-lbl">Marine Precast Producer</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ HOME SERVICE PREVIEWS ══════════════════════════════ -->
+<section id="home-previews">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Three Disciplines. One Specialist Contractor.</h2>
+      <p>From factory floor to open water — integrated capability across the full project lifecycle.</p>
+    </div>
+    <div class="preview-grid">
+
+      <a href="#precast" class="preview-card reveal">
+        <div class="preview-card-icon">
+          <img src="images/Thumbnnail_ precast.png" alt="Precast" style="width:60px;height:60px;object-fit:contain;">
+        </div>
+        <div class="preview-card-label">Precast</div>
+        <h3>Marine Precast Manufacturing</h3>
+        <p>The Maldives' leading producer of marine-grade precast concrete. L-elements, jetty columns, and custom units — precision-engineered in-country.</p>
+        <div class="preview-card-cta">Learn More <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.4 1.4L16.2 11H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg></div>
+      </a>
+
+      <a href="#solutions" class="preview-card reveal" style="transition-delay:0.1s">
+        <div class="preview-card-icon">
+          <img src="images/Thumbnnail_solutions.png" alt="Solutions" style="width:60px;height:60px;object-fit:contain;">
+        </div>
+        <div class="preview-card-label" style="color:var(--brand-mid)">Solutions</div>
+        <h3>Turnkey Marine Construction</h3>
+        <p>Full project delivery from design through installation and handover. Harbours, jetties, coastal works — we carry the programme end to end.</p>
+        <div class="preview-card-cta">Learn More <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.4 1.4L16.2 11H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg></div>
+      </a>
+
+      <a href="#solutions" class="preview-card reveal" style="transition-delay:0.2s">
+        <div class="preview-card-icon">
+          <img src="images/Thumbnnail_repair.png" alt="Repair" style="width:60px;height:60px;object-fit:contain;">
+        </div>
+        <div class="preview-card-label" style="color:var(--brand)">Repair</div>
+        <h3>Structural Repair &amp; Rehabilitation</h3>
+        <p>Cost-effective alternatives to full replacement. Jetty repair, marine concrete restoration, and asset life extension programmes.</p>
+        <div class="preview-card-cta">Learn More <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.4 1.4L16.2 11H4v2h12.2l-5.6 5.6L12 20l8-8z"/></svg></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRECAST — Dedicated flagship section ════════════════ -->
+<section id="precast">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Precast Technology</span>
+      <h2>The Maldives' Leading Marine Precast Producer</h2>
+      <p>Purpose-built for the most demanding marine environments. We manufacture every element in-country — combining precision factory control with deep knowledge of Maldivian coastal conditions.</p>
+    </div>
+
+    <div class="precast-layout">
+      <div class="precast-text reveal">
+        <div class="precast-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3L22 9.3l-5 4.9 1.2 6.8L12 18l-6.2 3 1.2-6.8-5-4.9 6.9-1z"/></svg>
+          Factory-Controlled Precision
+        </div>
+        <p>Our precast solutions are purpose-designed for coastal and marine infrastructure. We combine precision manufacturing with deep marine expertise to deliver elements that outperform traditional cast-in-place methods in the Maldivian environment.</p>
+
+        <div style="margin-top:28px; margin-bottom:8px;">
+          <h4 style="font-size:0.8rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--brand);margin-bottom:16px;">Key Strengths</h4>
+        </div>
+        <div class="precast-benefits">
+          <div class="benefit-row">
+            <div class="benefit-num">01</div>
+            <div class="benefit-text">
+              <h4>Marine Durability</h4>
+              <p>Saltwater-resistant mixes and protective coatings engineered for tropical conditions and permanent tidal exposure.</p>
+            </div>
+          </div>
+          <div class="benefit-row">
+            <div class="benefit-num">02</div>
+            <div class="benefit-text">
+              <h4>Precision Manufacturing</h4>
+              <p>Factory conditions eliminate on-site variability — every element meets exacting structural specification before leaving the yard.</p>
+            </div>
+          </div>
+          <div class="benefit-row">
+            <div class="benefit-num">03</div>
+            <div class="benefit-text">
+              <h4>Local Production Advantage</h4>
+              <p>In-country manufacturing means faster lead times, lower logistics costs, and direct supply coordination from Male' to any atoll.</p>
+            </div>
+          </div>
+          <div class="benefit-row">
+            <div class="benefit-num">04</div>
+            <div class="benefit-text">
+              <h4>Faster Project Delivery</h4>
+              <p>Reduced on-site pour time significantly accelerates schedules — a critical advantage for remote island projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="precast-products reveal" style="transition-delay:0.15s">
+        <h4 style="font-size:0.8rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--brand);margin-bottom:18px;">Product Range</h4>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div class="product-card">
+            <div class="product-thumb">
+              <img src="images/Product_thumb_L-element.png" alt="L-Elements" style="width:110px;height:110px;object-fit:cover;display:block;">
+              <div class="product-thumb-tag">Harbour</div>
+            </div>
+            <div class="product-info">
+              <h4>L-Elements</h4>
+              <p>Precision-cast harbour elements engineered for maximum structural stability under tidal and wave loads. The backbone of quay wall construction across the Maldives.</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb" style="background: linear-gradient(135deg, #003a7a 0%, #0052a8 100%);">
+              <img src="images/Product_thumb_Column.png" alt="Columns" style="width:110px;height:110px;object-fit:cover;display:block;">
+              <div class="product-thumb-tag">Jetty Systems</div>
+            </div>
+            <div class="product-info">
+              <h4>Columns</h4>
+              <p>High-resistance saltwater formulations for jetty pile and column systems. Designed for fast open-water installation and long service life in aggressive marine zones.</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-thumb" style="background: linear-gradient(135deg, #00437a 0%, #005eb5 100%);">
+              <img src="images/Product_thumb_Bespooke.png" alt="Custom Units" style="width:110px;height:110px;object-fit:cover;display:block;">
+              <div class="product-thumb-tag">Bespoke</div>
+            </div>
+            <div class="product-info">
+              <h4>Custom Units</h4>
+              <p>Bespoke elements for resort infrastructure, pool shells, coastal armour, and specialist structural applications — fabricated to specification, delivered to site.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOLUTIONS ════════════════════════════════════════════ -->
+<section id="solutions">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Services</span>
+      <h2>Our Solutions</h2>
+      <p>Three integrated service disciplines — using our precast products as the foundation for complete marine project delivery.</p>
+    </div>
+
+    <div class="solutions-stack">
+
+      <!-- A: Turnkey Marine Construction -->
+      <div class="solution-panel reveal">
+        <div class="solution-panel-num">
+          <div class="sol-num">A</div>
+          <div class="sol-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2-.68 0-1.29.09-1.87.24C14.93 11.53 16.92 9.5 17 8zm-3.76 8.08a4.49 4.49 0 00-1.24.68C11.67 17.23 11 17.5 10 17.5c-1.63 0-2.73-.7-3.87-1.42l-1.78.89C5.7 18.35 7.04 19.5 10 19.5c1.5 0 2.67-.48 3.67-1.08.46.28.94.51 1.46.67l.11-.28c-.37-.22-.72-.46-1-.73zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+          </div>
+        </div>
+        <div class="solution-panel-body">
+          <h3>Turnkey Marine Construction</h3>
+          <p>End-to-end project delivery for marine and coastal infrastructure — from feasibility and design through to installation and handover. We carry the full programme from day one to completion, with our precast elements forming the structural core of every build.</p>
+          <div class="process-strip">
+            <div class="process-step">
+              <span class="step-label">Design</span>
+              <span class="step-desc">Engineering &amp; feasibility</span>
+            </div>
+            <div class="process-step">
+              <span class="step-label">Procure</span>
+              <span class="step-desc">Materials &amp; logistics</span>
+            </div>
+            <div class="process-step">
+              <span class="step-label">Build</span>
+              <span class="step-desc">Marine construction</span>
+            </div>
+            <div class="process-step">
+              <span class="step-label">Install</span>
+              <span class="step-desc">Placement &amp; testing</span>
+            </div>
+            <div class="process-step">
+              <span class="step-label">Handover</span>
+              <span class="step-desc">QA &amp; documentation</span>
+            </div>
+          </div>
+          <div class="solution-features" style="padding-top:16px">
+            <div class="solution-feature">
+              <div class="feature-bullet"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <strong>Harbours, Jetties &amp; Coastal Works</strong>
+                <span>Full-scope construction from quay walls to breakwaters, revetments, and water villa substructures.</span>
+              </div>
+            </div>
+            <div class="solution-feature">
+              <div class="feature-bullet"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <strong>Value Engineering &amp; Cost Optimisation</strong>
+                <span>Integrated design-build capability means fewer interfaces, faster decisions, and better cost outcomes for clients.</span>
+              </div>
+            </div>
+            <div class="solution-feature">
+              <div class="feature-bullet"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <strong>Resort &amp; Private Island Infrastructure</strong>
+                <span>Bespoke marine construction for luxury resort development — jetties, overwater villa substructures, pool systems, and coastal access works.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- B: Structural Repair & Rehabilitation -->
+      <div class="solution-panel reveal" style="transition-delay:0.1s">
+        <div class="solution-panel-num">
+          <div class="sol-num">B</div>
+          <div class="sol-icon">
+            <svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.72L13 18v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5V2.05z"/></svg>
+          </div>
+        </div>
+        <div class="solution-panel-body">
+          <h3>Structural Repair &amp; Rehabilitation</h3>
+          <p>Cost-effective alternatives to full replacement — extending the service life of jetties, overwater villas, and marine infrastructure through internationally-compliant repair systems.</p>
+          <div class="solution-features">
+            <div class="solution-feature">
+              <div class="feature-bullet"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <strong>Jetty Repair &amp; Rehabilitation</strong>
+                <span>Structural beam and column repair, load-bearing restoration, and waterproofing to ACI 224R and BS EN 1504 standards.</span>
+              </div>
+            </div>
+            <div class="solution-feature">
+              <div class="feature-bullet"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <strong>Marine Concrete Restoration</strong>
+                <span>Crack classification and targeted repair using saltwater-resistant systems engineered for permanent underwater and tidal zone exposure.</span>
+              </div>
+            </div>
+            <div class="solution-feature">
+              <div class="feature-bullet"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <strong>Asset Life Extension</strong>
+                <span>Corrosion protection, surface coating, and strategic maintenance programmes that defer replacement and reduce long-term asset costs.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- C: Installation & Logistics -->
+      <div class="solution-panel reveal" style="transition-delay:0.2s">
+        <div class="solution-panel-num">
+          <div class="sol-num">C</div>
+          <div class="sol-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.7 1.3 3 3 3s3-1.3 3-3h6c0 1.7 1.3 3 3 3s3-1.3 3-3h2v-5l-3-4zm-.5 1.5L21 12h-4V9.5h2.5zM6 18c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm11 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/></svg>
+          </div>
+        </div>
+        <div class="solution-panel-body">
+          <h3>Installation &amp; Logistics</h3>
+          <p>Heavy lifting, marine transport, and precision deployment across the archipelago. Our logistics capability is purpose-built for the Maldives — managing the full supply chain from precast yard to remote atoll installation.</p>
+          <div class="solution-features">
+            <div class="solution-feature">
+              <div class="feature-bullet"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <strong>Marine Transport &amp; Island Delivery</strong>
+                <span>Coordinated barge and vessel logistics for moving heavy precast elements to any atoll across the archipelago — including remote locations with no port infrastructure.</span>
+              </div>
+            </div>
+            <div class="solution-feature">
+              <div class="feature-bullet"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <strong>Heavy Lifting &amp; Placement</strong>
+                <span>Specialist marine craneage and rigging capability for precise element positioning in open-water conditions — including tidal and wave-exposed environments.</span>
+              </div>
+            </div>
+            <div class="solution-feature">
+              <div class="feature-bullet"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <strong>Supply Chain &amp; Precast Deployment</strong>
+                <span>End-to-end supply chain management — from factory scheduling and quality sign-off through to site delivery and in-water installation of precast products.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.solutions-stack -->
+  </div>
+</section>
+
+<!-- ═══ PROJECTS ════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Selected Work</span>
+      <h2>Projects</h2>
+      <p>Delivering durable marine infrastructure across the Maldivian archipelago — from resort jetties to national harbour works.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Featured: Veligandhu (spanning both columns) -->
+      <div class="project-card featured reveal">
+        <div class="project-img">
+          <img src="images/project01_veligandhu-resort.jpg" alt="Veligandhu Resort Jetty">
+          <div class="project-img-overlay"></div>
+          <div class="project-cat-tag">Jetty &amp; Water Villa</div>
+        </div>
+        <div class="project-body">
+          <div class="project-loc">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/></svg>
+            Ari Atoll
+          </div>
+          <h3>Veligandhu Resort — Jetty &amp; Water Villa Substructures</h3>
+          <p class="project-desc">Full-scope delivery of jetty and overwater villa substructures using precast column and beam systems. Engineered for fast marine installation with minimal disruption to resort operations.</p>
+          <div class="project-tags">
+            <span class="project-tag project-tag-precast">Precast Supply</span>
+            <span class="project-tag project-tag-turnkey">Turnkey</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rangali Bridge -->
+      <div class="project-card reveal" style="transition-delay:0.1s">
+        <div class="project-img">
+          <img src="images/project02_rangali-bridge.jpg" alt="Rangali Bridge">
+          <div class="project-img-overlay"></div>
+          <div class="project-cat-tag">Bridge Structure</div>
+        </div>
+        <div class="project-body">
+          <div class="project-loc">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/></svg>
+            Ari Atoll
+          </div>
+          <h3>Rangali Bridge</h3>
+          <p class="project-desc">Design and construction of a precast concrete bridge connecting island infrastructure across a tidal channel, using marine-grade reinforced elements and driven pile foundations.</p>
+          <div class="project-tags">
+            <span class="project-tag project-tag-precast">Precast Supply</span>
+            <span class="project-tag project-tag-turnkey">Turnkey</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kihadhoo Harbour -->
+      <div class="project-card reveal" style="transition-delay:0.15s">
+        <div class="project-img">
+          <img src="images/project03_kihadhoo-harbour.jpg" alt="Kihadhoo Harbour">
+          <div class="project-img-overlay"></div>
+          <div class="project-cat-tag">Harbour Works</div>
+        </div>
+        <div class="project-body">
+          <div class="project-loc">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/></svg>
+            Baa Atoll
+          </div>
+          <h3>Kihadhoo Harbour</h3>
+          <p class="project-desc">Construction of a new harbour basin including precast L-element quay walls, dredging, and associated civil works — delivering safe vessel access for the island community.</p>
+          <div class="project-tags">
+            <span class="project-tag project-tag-precast">Precast Supply</span>
+            <span class="project-tag project-tag-turnkey">Turnkey</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fuvahmulah Revetment -->
+      <div class="project-card reveal" style="transition-delay:0.2s">
+        <div class="project-img">
+          <img src="images/project04_fuvahmulah-cp.jpg" alt="Coastal Revetment Fuvahmulah">
+          <div class="project-img-overlay"></div>
+          <div class="project-cat-tag">Coastal Protection</div>
+        </div>
+        <div class="project-body">
+          <div class="project-loc">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/></svg>
+            Gnaviyani Atoll
+          </div>
+          <h3>Coastal Revetment — Fuvahmulah</h3>
+          <p class="project-desc">Large-scale coastal revetment works protecting Fuvahmulah's shoreline from erosion and storm surge, using precast armour units and rock fill systems engineered for high wave exposure.</p>
+          <div class="project-tags">
+            <span class="project-tag project-tag-precast">Precast Supply</span>
+            <span class="project-tag project-tag-turnkey">Turnkey</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-layout">
+
+      <div class="contact-header reveal">
+        <span class="eyebrow eyebrow-white">Get in Touch</span>
+        <h2>We Are Ready to Support Your Next Project</h2>
+        <p>MT Højgaard Maldives is the archipelago's most experienced marine specialist contractor. From harbour authorities to resort developers, we deliver from day one.</p>
+
+        <div class="credibility-bar">
+          <div class="cred-item">
+            <span class="cred-num">18+</span>
+            <span class="cred-label">Atolls Covered</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-num">79</span>
+            <span class="cred-label">Islands Served</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-num">25+</span>
+            <span class="cred-label">Years in Maldives</span>
+          </div>
+        </div>
+
+        <div class="contact-categories">
+          <div class="contact-cat">
+            <div class="contact-cat-icon">
+              <svg viewBox="0 0 24 24"><path d="M20 6H4v2h16V6zm-2 4H6v2h12v-2zm2 4H4v2h16v-2z"/></svg>
+            </div>
+            <div>
+              <h4>Precast Enquiries</h4>
+              <p>Technical specifications, product availability, and fabrication timelines.</p>
+            </div>
+          </div>
+          <div class="contact-cat">
+            <div class="contact-cat-icon">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            </div>
+            <div>
+              <h4>Bids &amp; Tender</h4>
+              <p>Tender submissions, pricing enquiries, and project qualification.</p>
+            </div>
+          </div>
+          <div class="contact-cat">
+            <div class="contact-cat-icon">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+            </div>
+            <div>
+              <h4>Turnkey Solutions</h4>
+              <p>Full-scope project enquiries from design through to installation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="detail-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/></svg></div>
+            <div class="detail-text">
+              <div class="lbl">Address</div>
+              <div class="val">5th Floor — Filigasdhoshuge Building<br>Ameer Ahmed Magu, 20077, Malé, Maldives</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="detail-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+            <div class="detail-text">
+              <div class="lbl">Phone</div>
+              <div class="val">+960 794 0680 &nbsp;|&nbsp; +960 778 2602</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="detail-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+            <div class="detail-text">
+              <div class="lbl">Email</div>
+              <div class="val">nu@mth.dk</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal" style="transition-delay:0.15s">
+        <h3>Send an Enquiry</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input id="f-firstname" type="text" placeholder="Ahmed" />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input id="f-lastname" type="text" placeholder="Mohamed" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input id="f-email" type="email" placeholder="ahmed@company.com" />
+        </div>
+        <div class="form-group">
+          <label>Enquiry Type</label>
+          <select id="f-type">
+            <option value="">Select department…</option>
+            <option>Precast Enquiries</option>
+            <option>Bids &amp; Tender</option>
+            <option>Turnkey Solutions</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="f-message" placeholder="Tell us about your project…"></textarea>
+        </div>
+        <button class="btn-submit" onclick="handleSubmit(event)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          Send Enquiry
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ══════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">
+          <div class="nav-logo-mark">
+            <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoACADASIAAhEBAxEB/8QAGgAAAwEAAwAAAAAAAAAAAAAAAAcIBgMEBf/EAC0QAAEDBAEDBAECBwAAAAAAAAECAwQFBgcRAAgSIRMxQVGBQqEUIiVhYnLB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwQC/8QAIxEAAgICAQQCAwAAAAAAAAAAAQMAAgQRIRIxQVEFE3GRsf/aAAwDAQACEQMRAD8AfeFcXWhbtiUhZoUGTUJERt+TJkMhxalqT3fq3rW9ePrmjyLcdtY9tCRcdWpilQY60ILcSOgrJWoJGgSke5+xzzn8oY6tmlw4lVu6mR1tR0I9NLhWrwkD2SCeKrM2cMM3bacq2Zkuv1KK8tCyunRPTUChQUNF4p+f7cuopzm9VgSNySzFqXqpAOo48b3NbORbSZuGk0taITzi0BuZGbSsFKtHYBUPj75nM34ttC4rDq7qaHBi1GLEcfjSY7IbWlSB3fp1vfbrzv34kLD6h7Ox9ajVt2tatakxWnFuJcnymwslStnYSDzirvVlXpsR+JGtSmIZfbU2v1XFqOlDXwR98org5FW9Sxob45gnLRZernZ/EesHp+w/EAW3aDLh0D3PTJDgP4U4R+3JAyBToF6ZcmUbG1CYagtqU1FajJ7UrDadrcJPxsKOz8a5VnUjkUWdiFlUJ8oqlbYDEM+CQkpSXF/hKvf7UOdLpKxabLtRdfrEcprdXQklDg8x2RvtRr4J3s/j65rHfdKy5hJPYAn9zLk0bcKoNeTEz0Q0Wj1u+K6xWaTAqTTdNC0Ilx0PJSr1UjYCgdHXK4fs20Ex3NWrQhpB1/T2vHj/AF5M3RbANKzFedMKSn+FirZ0f8ZAH/OVbXXhHok99R0GoziyfrSSeF8lcnI4PqJg1H08j3I1x7dFvZLyNSKpkOsQKXSrbgMsQ4Mlf8slwJ0Ts+NdyQo/gcrFq/7FcQFovO3tH23UmR+xVw4cpzsepsB4EDEfYV35MQ+J6zatA6mMgTXbhpLNMkxUrYkqmN+m4VKbJCVb0o734HNfmrOVh0+xavAo9ejVSqyoy47LMbagCsdpJUBoaBJ9/jhw4gxKNbU232H8mDkXWsivsz//2Q==" alt="MTH Logo" style="height:36px;width:auto;display:block;">
+          </div>
+          <div class="nav-logo-text">
+            <span class="top">MT Højgaard</span>
+            <span class="sub">Maldives</span>
+          </div>
+        </a>
+        <p>The Maldives' leading specialist contractor for marine and civil infrastructure. Delivering durable engineering solutions across the archipelago.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#solutions">Turnkey Marine Construction</a></li>
+          <li><a href="#solutions">Structural Repair</a></li>
+          <li><a href="#solutions">Installation &amp; Logistics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#precast">Precast</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+9607940680">+960 794 0680</a></li>
+          <li><a href="tel:+9607782602">+960 778 2602</a></li>
+          <li><a href="mailto:nu@mth.dk">nu@mth.dk</a></li>
+          <li><a href="#contact">Malé, Maldives</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <p>© 2025 MT Højgaard Maldives Pvt Ltd. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Report Abuse</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  // Scroll reveal
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target;
+
+    const firstName = document.getElementById('f-firstname').value.trim();
+    const lastName  = document.getElementById('f-lastname').value.trim();
+    const email     = document.getElementById('f-email').value.trim();
+    const type      = document.getElementById('f-type').value;
+    const message   = document.getElementById('f-message').value.trim();
+
+    const subject = encodeURIComponent((type || 'General Enquiry') + ' — MT Højgaard Maldives');
+    const body = encodeURIComponent(
+      'Name: ' + firstName + ' ' + lastName + '\n' +
+      'Email: ' + email + '\n' +
+      'Enquiry Type: ' + (type || 'Not specified') + '\n\n' +
+      'Message:\n' + message
+    );
+
+    window.location.href = 'mailto:nu@mth.dk?subject=' + subject + '&body=' + body;
+
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✓ Enquiry Sent';
+    btn.style.background = '#2d7a3a';
+    btn.style.color = '#fff';
+    setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.style.color = ''; }, 3000);
+  }
+
+  // Smooth scroll for nav links on same page
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+        closeMenu();
+      }
+    });
+  });
+</script>
+</body>
+</html>

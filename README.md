@@ -1,2 +1,2 @@
 # reefcore-site
-making the reefcore worker dev to pages
+Premium marine infrastructure and precast solutions platform for Maldives coastal and island development projects.

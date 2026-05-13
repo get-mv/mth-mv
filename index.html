@@ -14,7 +14,6 @@
    ROOT & BRAND TOKENS
 ═══════════════════════════════════════════════════════ */
 :root {
-  color-scheme: light only;
   --mth-primary-blue: #003366;
   --mth-white: #ffffff;
   --mth-grey-light: #f4f4f4;
@@ -266,7 +265,7 @@ p { line-height: var(--line-height-body); color: var(--text-muted); }
 
 /* Stats band */
 #hero-stats {
-  background: var(--off-white);
+  background: var(--brand-dark);
   border-top: 3px solid var(--accent);
 }
 .hero-stats-inner {
@@ -276,7 +275,7 @@ p { line-height: var(--line-height-body); color: var(--text-muted); }
 }
 .hero-stat {
   text-align: center; padding: 26px 20px;
-  border-right: 1px solid var(--border);
+  border-right: 1px solid rgba(255,255,255,0.08);
 }
 .hero-stat:last-child { border-right: none; }
 .stat-num {
@@ -288,7 +287,7 @@ p { line-height: var(--line-height-body); color: var(--text-muted); }
 }
 .stat-lbl {
   font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--text-muted); margin-top: 6px; display: block;
+  color: rgba(255,255,255,0.45); margin-top: 6px; display: block;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -370,7 +369,7 @@ p { line-height: var(--line-height-body); color: var(--text-muted); }
 }
 .solution-panel:hover { box-shadow: 0 8px 40px rgba(0,51,102,0.10); }
 .solution-panel-num {
-  background: var(--brand);
+  background: var(--brand-dark);
   display: flex; flex-direction: column;
   justify-content: space-between;
   padding: 36px 32px;
@@ -532,24 +531,24 @@ p { line-height: var(--line-height-body); color: var(--text-muted); }
    PRECAST — Dedicated flagship section
 ═══════════════════════════════════════════════════════ */
 #precast {
-  background: var(--off-white);
+  background: var(--brand-dark);
   padding: var(--section-padding);
 }
 #precast .section-header h2,
-#precast .section-header p { color: var(--text); }
-#precast .section-header p { color: var(--text-muted); }
-#precast .precast-badge { background: rgba(184,146,58,0.12); border: 1px solid rgba(184,146,58,0.35); color: var(--accent); }
-#precast .precast-text > p { color: var(--text-muted); }
-#precast .precast-text h4 { color: var(--brand-dark) !important; }
-#precast .benefit-row { background: var(--white); border-left: 3px solid transparent; }
-#precast .benefit-row:hover { border-left-color: var(--accent); background: #edf1f8; }
+#precast .section-header p { color: rgba(255,255,255,0.85); }
+#precast .section-header p { color: rgba(255,255,255,0.5); }
+#precast .precast-badge { background: rgba(184,146,58,0.15); border: 1px solid rgba(184,146,58,0.3); color: var(--accent); }
+#precast .precast-text > p { color: rgba(255,255,255,0.6); }
+#precast .precast-text h4 { color: var(--accent-light) !important; }
+#precast .benefit-row { background: rgba(255,255,255,0.04); border-left: 3px solid transparent; }
+#precast .benefit-row:hover { border-left-color: var(--accent); background: rgba(255,255,255,0.07); }
 #precast .benefit-num { color: var(--accent); }
-#precast .benefit-text h4 { color: var(--text); }
-#precast .benefit-text p { color: var(--text-muted); }
-#precast .product-card { border-color: var(--border); background: var(--white); }
-#precast .product-card:hover { box-shadow: 0 6px 24px rgba(0,51,102,0.1); border-color: rgba(184,146,58,0.4); }
-#precast .product-info h4 { color: var(--text); }
-#precast .product-info p { color: var(--text-muted); }
+#precast .benefit-text h4 { color: rgba(255,255,255,0.9); }
+#precast .benefit-text p { color: rgba(255,255,255,0.45); }
+#precast .product-card { border-color: rgba(255,255,255,0.08); background: rgba(255,255,255,0.03); }
+#precast .product-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.3); border-color: rgba(184,146,58,0.25); }
+#precast .product-info h4 { color: rgba(255,255,255,0.9); }
+#precast .product-info p { color: rgba(255,255,255,0.45); }
 .precast-layout {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: clamp(40px, 6vw, 80px); align-items: start;
@@ -613,22 +612,22 @@ p { line-height: var(--line-height-body); color: var(--text-muted); }
    CONTACT — restructured
 ═══════════════════════════════════════════════════════ */
 #contact {
-  background: var(--white);
+  background: var(--brand-dark);
   padding: var(--section-padding);
 }
 .contact-layout {
-  display: grid; grid-template-columns: 1fr 1.2fr;
-  gap: clamp(48px, 7vw, 96px); align-items: start;
+  max-width: 760px; margin: 0 auto; text-align: center;
 }
 .contact-header h2 {
-  color: var(--text); margin-bottom: 16px; font-size: clamp(1.7rem, 3vw, 2.3rem);
+  color: var(--white); margin-bottom: 16px; font-size: clamp(1.7rem, 3vw, 2.3rem);
 }
 .contact-header > p {
-  color: var(--text-muted); font-size: 0.98rem;
-  max-width: 400px; line-height: 1.7; margin-bottom: 36px;
+  color: rgba(255,255,255,0.55); font-size: 0.98rem;
+  max-width: 520px; line-height: 1.7; margin: 0 auto 36px;
 }
 .credibility-bar {
-  display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 40px;
+  display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 48px;
+  justify-content: center;
 }
 .cred-item { display: flex; flex-direction: column; gap: 2px; }
 .cred-num {
@@ -637,20 +636,23 @@ p { line-height: var(--line-height-body); color: var(--text-muted); }
 }
 .cred-label {
   font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--text-muted); font-weight: 600;
+  color: rgba(255,255,255,0.4); font-weight: 600;
 }
 
 /* Contact category cards */
-.contact-categories { display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px; }
+.contact-categories {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 14px; margin-bottom: 48px; text-align: left;
+}
 .contact-cat {
-  display: flex; align-items: flex-start; gap: 16px;
-  padding: 20px 22px;
-  background: var(--off-white); border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+  padding: 22px 20px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--border-radius-sm);
   transition: background var(--transition-speed);
 }
-.contact-cat:hover { background: #edf1f8; }
+.contact-cat:hover { background: rgba(255,255,255,0.07); }
 .contact-cat-icon {
   width: 36px; height: 36px;
   background: rgba(184,146,58,0.12); border-radius: var(--border-radius-sm);
@@ -660,62 +662,29 @@ p { line-height: var(--line-height-body); color: var(--text-muted); }
 .contact-cat h4 {
   font-family: var(--font-main);
   font-size: 0.82rem; font-weight: 700; letter-spacing: -0.01em;
-  text-transform: uppercase; color: var(--text); margin-bottom: 3px;
+  text-transform: uppercase; color: var(--white); margin-bottom: 3px;
 }
-.contact-cat p { font-size: 0.83rem; color: var(--text-muted); margin: 0; }
+.contact-cat p { font-size: 0.83rem; color: rgba(255,255,255,0.5); margin: 0; }
 
 /* Address block */
-.contact-details { display: flex; flex-direction: column; gap: 12px; }
-.contact-detail { display: flex; gap: 12px; align-items: flex-start; }
+.contact-details {
+  display: flex; gap: 32px; flex-wrap: wrap; justify-content: center;
+  padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.08);
+}
+.contact-detail { display: flex; gap: 12px; align-items: flex-start; text-align: left; }
 .detail-icon {
-  width: 34px; height: 34px; background: var(--off-white);
+  width: 34px; height: 34px; background: rgba(255,255,255,0.06);
   border-radius: var(--border-radius-sm);
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .detail-icon svg { width: 15px; height: 15px; fill: var(--accent); }
 .detail-text .lbl {
   font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--text-muted);
+  text-transform: uppercase; color: rgba(255,255,255,0.35);
 }
-.detail-text .val { font-size: 0.88rem; color: var(--text); font-weight: 500; line-height: 1.5; }
+.detail-text .val { font-size: 0.88rem; color: rgba(255,255,255,0.75); font-weight: 500; line-height: 1.5; }
 
-/* Contact form side */
-.contact-form-wrap {
-  background: var(--off-white); border: 1px solid var(--border);
-  border-radius: var(--border-radius-sm); padding: clamp(28px, 4vw, 44px);
-}
-.contact-form-wrap h3 { color: var(--text); margin-bottom: 26px; font-size: 1.2rem; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
-.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
-.form-group:last-of-type { margin-bottom: 20px; }
-.form-group label {
-  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--text-muted);
-}
-.form-group input, .form-group select, .form-group textarea {
-  border: 1px solid var(--border); padding: 11px 14px;
-  font-family: var(--font-main); font-size: 0.9rem;
-  color: var(--text); background: var(--white);
-  border-radius: var(--border-radius-sm); outline: none;
-  transition: border-color var(--transition-speed);
-}
-.form-group input::placeholder,
-.form-group textarea::placeholder { color: #aab4c2; }
-.form-group select option { background: var(--white); color: var(--text); }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-  border-color: var(--accent);
-}
-.form-group textarea { resize: vertical; min-height: 100px; }
-.btn-submit {
-  width: 100%; background: var(--accent); color: var(--brand-dark);
-  padding: 14px 28px; font-weight: 800; font-size: 0.82rem;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  border: none; cursor: pointer;
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  border-radius: var(--border-radius-sm);
-  transition: background var(--transition-speed), transform 0.15s;
-}
-.btn-submit:hover { background: var(--accent-light); transform: translateY(-1px); }
+
 
 /* ═══════════════════════════════════════════════════════
    FOOTER
@@ -775,7 +744,6 @@ footer {
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .footer-top { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
   .hero-stats-inner { grid-template-columns: repeat(2, 1fr); }
   .credibility-bar { gap: 20px; }
   .process-strip { flex-direction: column; }
@@ -1341,42 +1309,6 @@ footer {
         </div>
       </div>
 
-      <div class="contact-form-wrap reveal" style="transition-delay:0.15s">
-        <h3>Send an Enquiry</h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label>First Name</label>
-            <input id="f-firstname" type="text" placeholder="Ahmed" />
-          </div>
-          <div class="form-group">
-            <label>Last Name</label>
-            <input id="f-lastname" type="text" placeholder="Mohamed" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input id="f-email" type="email" placeholder="ahmed@company.com" />
-        </div>
-        <div class="form-group">
-          <label>Enquiry Type</label>
-          <select id="f-type">
-            <option value="">Select department…</option>
-            <option>Precast Enquiries</option>
-            <option>Bids &amp; Tender</option>
-            <option>Turnkey Solutions</option>
-            <option>General Enquiry</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea id="f-message" placeholder="Tell us about your project…"></textarea>
-        </div>
-        <button class="btn-submit" onclick="handleSubmit(event)">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-          Send Enquiry
-        </button>
-      </div>
-
     </div>
   </div>
 </section>
@@ -1455,74 +1387,6 @@ footer {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-  // Form submit
-  async function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target;
-
-    const firstName = document.getElementById('f-firstname').value.trim();
-    const lastName  = document.getElementById('f-lastname').value.trim();
-    const email     = document.getElementById('f-email').value.trim();
-    const type      = document.getElementById('f-type').value;
-    const message   = document.getElementById('f-message').value.trim();
-
-    // Basic client-side validation
-    if (!firstName || !email || !message) {
-      alert('Please fill in your name, email, and message.');
-      return;
-    }
-
-    // Disable button and show loading state
-    const orig = btn.innerHTML;
-    btn.disabled = true;
-    btn.innerHTML = 'Sending…';
-    btn.style.opacity = '0.75';
-
-    try {
-      const formData = new FormData();
-      formData.append('firstName', firstName);
-      formData.append('lastName',  lastName);
-      formData.append('email',     email);
-      formData.append('type',      type || 'General Enquiry');
-      formData.append('message',   message);
-
-      const res  = await fetch('/submit', { method: 'POST', body: formData });
-      const data = await res.json();
-
-      if (data.success) {
-        btn.innerHTML = '✓ Enquiry Sent';
-        btn.style.background = '#2d7a3a';
-        btn.style.color      = '#fff';
-        btn.style.opacity    = '1';
-        // Clear fields
-        ['f-firstname','f-lastname','f-email','f-message'].forEach(id => {
-          document.getElementById(id).value = '';
-        });
-        document.getElementById('f-type').selectedIndex = 0;
-        setTimeout(() => {
-          btn.innerHTML        = orig;
-          btn.style.background = '';
-          btn.style.color      = '';
-          btn.disabled         = false;
-        }, 4000);
-      } else {
-        throw new Error(data.error || 'Unknown error');
-      }
-    } catch (err) {
-      btn.innerHTML        = '✗ Failed — try again';
-      btn.style.background = '#a33';
-      btn.style.color      = '#fff';
-      btn.style.opacity    = '1';
-      setTimeout(() => {
-        btn.innerHTML        = orig;
-        btn.style.background = '';
-        btn.style.color      = '';
-        btn.style.opacity    = '';
-        btn.disabled         = false;
-      }, 4000);
-    }
-  }
 
   // Smooth scroll for nav links on same page
   document.querySelectorAll('a[href^="#"]').forEach(link => {

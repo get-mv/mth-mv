@@ -1457,7 +1457,7 @@ footer {
   document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
   // Form submit
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     const btn = e.target;
 
@@ -1467,21 +1467,61 @@ footer {
     const type      = document.getElementById('f-type').value;
     const message   = document.getElementById('f-message').value.trim();
 
-    const subject = encodeURIComponent((type || 'General Enquiry') + ' — MT Højgaard Maldives');
-    const body = encodeURIComponent(
-      'Name: ' + firstName + ' ' + lastName + '\n' +
-      'Email: ' + email + '\n' +
-      'Enquiry Type: ' + (type || 'Not specified') + '\n\n' +
-      'Message:\n' + message
-    );
+    // Basic client-side validation
+    if (!firstName || !email || !message) {
+      alert('Please fill in your name, email, and message.');
+      return;
+    }
 
-    window.location.href = 'mailto:nu@mth.dk?subject=' + subject + '&body=' + body;
-
+    // Disable button and show loading state
     const orig = btn.innerHTML;
-    btn.innerHTML = '✓ Enquiry Sent';
-    btn.style.background = '#2d7a3a';
-    btn.style.color = '#fff';
-    setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.style.color = ''; }, 3000);
+    btn.disabled = true;
+    btn.innerHTML = 'Sending…';
+    btn.style.opacity = '0.75';
+
+    try {
+      const formData = new FormData();
+      formData.append('firstName', firstName);
+      formData.append('lastName',  lastName);
+      formData.append('email',     email);
+      formData.append('type',      type || 'General Enquiry');
+      formData.append('message',   message);
+
+      const res  = await fetch('/submit', { method: 'POST', body: formData });
+      const data = await res.json();
+
+      if (data.success) {
+        btn.innerHTML = '✓ Enquiry Sent';
+        btn.style.background = '#2d7a3a';
+        btn.style.color      = '#fff';
+        btn.style.opacity    = '1';
+        // Clear fields
+        ['f-firstname','f-lastname','f-email','f-message'].forEach(id => {
+          document.getElementById(id).value = '';
+        });
+        document.getElementById('f-type').selectedIndex = 0;
+        setTimeout(() => {
+          btn.innerHTML        = orig;
+          btn.style.background = '';
+          btn.style.color      = '';
+          btn.disabled         = false;
+        }, 4000);
+      } else {
+        throw new Error(data.error || 'Unknown error');
+      }
+    } catch (err) {
+      btn.innerHTML        = '✗ Failed — try again';
+      btn.style.background = '#a33';
+      btn.style.color      = '#fff';
+      btn.style.opacity    = '1';
+      setTimeout(() => {
+        btn.innerHTML        = orig;
+        btn.style.background = '';
+        btn.style.color      = '';
+        btn.style.opacity    = '';
+        btn.disabled         = false;
+      }, 4000);
+    }
   }
 
   // Smooth scroll for nav links on same page
@@ -1497,4 +1537,4 @@ footer {
   });
 </script>
 </body>
-</html> 
+</html>

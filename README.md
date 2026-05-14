@@ -96,3 +96,4 @@ To deploy: push changes to the `main` branch. GitHub Pages will serve the update
 
 Internal / Proprietary — MT Højgaard Maldives Pvt Ltd  
 All rights reserved. © 2026
+.

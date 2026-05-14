@@ -1,0 +1,12 @@
+# robots.txt — MT Højgaard Maldives
+# https://mth-mv.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Block admin or private paths if they exist
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://mth-mv.com/sitemap.xml

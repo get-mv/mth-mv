@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>MT Højgaard – Marine Structural Repair & Rehabilitation</title>
+<meta name="title" content="MT Højgaard – Marine Structural Repair & Rehabilitation">
+<meta name="description" content="Engineered repair methodologies for water villas, resort jetties, and marine concrete infrastructure operating in aggressive saltwater environments in the Maldives.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="MT Højgaard – Marine Structural Repair">
+<meta property="og:description" content="Engineered repair methodologies for marine concrete infrastructure in the Maldives.">
+<meta property="og:image" content="images/repair/hero-desktop_2560x1440.webp"> <link rel="icon" type="image/png" href="images/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════════ */
+:root {
+  --bg:           #f4f4f1;
+  --white:        #ffffff;
+  --text:         #14202d;
+  --text-soft:    #556070;
+  --line:         #d6dce3;
+  --accent:       #1d5a8a;
+  --accent-light: #2e7ab8;
+  --accent-glow:  rgba(29,90,138,0.14);
+  --dark:         #0e1e2e;
+  --darker:       #091624;
+  --section:      #eceef2;
+  --nav-h:        72px;
+  --container:    1240px;
+  --r:            3px;
+  --shadow-card:  0 2px 24px rgba(14,30,46,0.07), 0 1px 4px rgba(14,30,46,0.04);
+  --transition:   cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ═══════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+img, picture { max-width:100%; display:block; }
+picture img { width: 100%; height: 100%; object-fit: cover; }
+
+a { text-decoration:none; }
+
+/* ═══════════════════════════════════════════
+   LAYOUT
+═══════════════════════════════════════════ */
+.container {
+  width: min(100% - 48px, var(--container));
+  margin-inline: auto;
+}
+
+/* ═══════════════════════════════════════════
+   SECTION PROGRESS BAR
+═══════════════════════════════════════════ */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  z-index: 2000;
+  transition: width 0.1s linear;
+}
+
+/* ═══════════════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════════════ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: var(--nav-h);
+  background: rgba(244, 244, 241, 0.94);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: box-shadow 0.3s var(--transition);
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(14,30,46,0.10);
+}
+
+.nav-inner {
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+/* Desktop Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-soft);
+  font-size: 0.83rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 6px 12px;
+  border-radius: var(--r);
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 2px; left: 12px; right: 12px;
+  height: 1.5px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s var(--transition);
+  border-radius: 2px;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.nav-links a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+/* Hamburger wrapper */
+.nav-cta {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  padding: 4px;
+  border: none;
+  background: none;
+  border-radius: var(--r);
+  flex-shrink: 0;
+}
+
+.hamburger span {
+  display: block;
+  height: 1.5px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.3s var(--transition), opacity 0.3s;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile drawer */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0; right: 0;
+  background: rgba(244,244,241,0.98);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  z-index: 999;
+  padding: 20px 24px 28px;
+  flex-direction: column;
+  gap: 4px;
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.28s var(--transition), opacity 0.28s;
+}
+
+.mobile-menu.open {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu a {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.2s;
+}
+
+.mobile-menu a:last-child { border-bottom: none; }
+
+.mobile-menu a:hover,
+.mobile-menu a.active { color: var(--accent); }
+
+/* ═══════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════ */
+.hero {
+  min-height: 100svh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: calc(var(--nav-h) + 80px) 0 80px;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/repair/hero-desktop_2560x1440.webp') center 40% / cover no-repeat;
+  transform: scale(1.04);
+  transition: transform 8s ease-out;
+}
+
+.hero-bg.loaded { transform: scale(1); }
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(10,22,36,0.96) 0%, rgba(10,22,36,0.55) 50%, rgba(10,22,36,0.28) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+}
+
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  font-size: 0.72rem;
+  margin-bottom: 28px;
+  color: rgba(255,255,255,0.65);
+  font-weight: 500;
+}
+
+.hero-kicker::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--accent-light);
+  flex-shrink: 0;
+}
+
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(3.4rem, 7.5vw, 6.8rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: #00E5FF; /* High-Vis Marine Cyan */
+  text-shadow: 0 0 24px rgba(0, 229, 255, 0.45);
+}
+
+.hero p {
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  line-height: 1.85;
+  color: rgba(255,255,255,0.78);
+  max-width: 580px;
+  font-weight: 300;
+}
+
+.hero-actions {
+  margin-top: 44px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.25s var(--transition);
+  border-radius: var(--r);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: white;
+  color: var(--dark);
+}
+
+.btn-primary:hover { background: #dde5ec; }
+
+.btn-secondary {
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  background: rgba(255,255,255,0.05);
+}
+
+.btn-secondary:hover { background: rgba(255,255,255,0.12); }
+
+.hero-scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.38);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  z-index: 2;
+  animation: float 2.4s ease-in-out infinite;
+}
+
+.hero-scroll::after {
+  content: '';
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ═══════════════════════════════════════════
+   SECTIONS
+═══════════════════════════════════════════ */
+section { padding: clamp(72px, 10vw, 120px) 0; }
+
+.section-soft { background: var(--section); }
+
+.section-dark {
+  background: var(--dark);
+  color: white;
+}
+
+.section-darker {
+  background: var(--darker);
+  color: white;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: var(--accent);
+  font-size: 0.7rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.section-dark .eyebrow,
+.section-darker .eyebrow {
+  color: rgba(255,255,255,0.5);
+}
+
+.section-dark .eyebrow::before,
+.section-darker .eyebrow::before {
+  background: rgba(255,255,255,0.3);
+}
+
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+  line-height: 0.94;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+.section-text {
+  color: var(--text-soft);
+  line-height: 1.95;
+  font-size: 0.97rem;
+  max-width: 680px;
+  font-weight: 300;
+}
+
+.section-dark .section-text,
+.section-darker .section-text {
+  color: rgba(255,255,255,0.65);
+}
+
+/* ═══════════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════════ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(40px, 7vw, 90px);
+  align-items: center;
+}
+
+.about-image {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: #ccd5de;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--transition);
+}
+
+.about-image:hover img { transform: scale(1.03); }
+
+.about-points {
+  margin-top: 40px;
+  display: grid;
+  gap: 0;
+}
+
+.about-point {
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  transition: background 0.2s;
+}
+
+.about-point:last-child { border-bottom: 1px solid var(--line); }
+
+.about-point h4 {
+  margin-bottom: 7px;
+  font-size: 0.84rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.about-point p {
+  color: var(--text-soft);
+  line-height: 1.8;
+  font-size: 0.93rem;
+}
+
+/* ═══════════════════════════════════════════
+   FEATURE CARDS
+═══════════════════════════════════════════ */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.feature {
+  background: white;
+  padding: clamp(28px, 4vw, 44px);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--r);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: transform 0.3s var(--transition), box-shadow 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(14,30,46,0.12);
+}
+
+.feature-number {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-number::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.feature h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 16px;
+  line-height: 0.95;
+  color: var(--dark);
+}
+
+.feature p {
+  line-height: 1.9;
+  color: var(--text-soft);
+  font-size: 0.93rem;
+}
+
+/* ═══════════════════════════════════════════
+   SPLIT
+═══════════════════════════════════════════ */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(36px, 7vw, 80px);
+  align-items: center;
+}
+
+.split-image {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: #ccd5de;
+  border-radius: var(--r);
+}
+
+.split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--transition);
+}
+
+.split-image:hover img { transform: scale(1.03); }
+
+.list {
+  margin-top: 40px;
+  display: grid;
+  gap: 0;
+}
+
+.list-item {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.list-item:first-child { border-top: 1px solid var(--line); }
+
+.list-item span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 9px;
+  font-weight: 700;
+}
+
+.list-item span::before {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 1.5px;
+  background: var(--accent);
+}
+
+.list-item p {
+  color: var(--text-soft);
+  line-height: 1.9;
+  font-size: 0.93rem;
+}
+
+/* ═══════════════════════════════════════════
+   TIMELINE
+═══════════════════════════════════════════ */
+.timeline {
+  margin-top: 70px;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: var(--line);
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 40px;
+  padding: 36px 0 36px 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.timeline-row:first-child { border-top: 1px solid var(--line); }
+
+.timeline-row::before {
+  content: '';
+  position: absolute;
+  left: -4.5px;
+  top: 44px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+}
+
+.timeline-phase {
+  font-size: 0.76rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  padding-top: 4px;
+  padding-left: 24px;
+}
+
+.timeline-content h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 12px;
+  line-height: 0.95;
+}
+
+.timeline-content p {
+  line-height: 1.9;
+  color: var(--text-soft);
+  font-size: 0.93rem;
+}
+
+/* ═══════════════════════════════════════════
+   STATS BAND
+═══════════════════════════════════════════ */
+.stats-band {
+  background: var(--accent);
+  padding: 56px 0;
+  color: white;
+}
+
+.stats-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 20px;
+  border-right: 1px solid rgba(255,255,255,0.18);
+}
+
+.stat-item:last-child { border-right: none; }
+
+.stat-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════════ */
+.contact-section {
+  background: var(--dark);
+  color: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(36px, 7vw, 80px);
+  align-items: center;
+}
+
+.contact-image {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-radius: var(--r);
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-section .section-title { color: white; }
+
+.contact-box {
+  margin-top: 48px;
+  display: grid;
+  gap: 0;
+}
+
+.contact-line {
+  font-size: 0.97rem;
+  color: rgba(255,255,255,0.82);
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.contact-line:first-child { border-top: 1px solid rgba(255,255,255,0.1); }
+
+.contact-line strong {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  font-weight: 600;
+  padding-top: 2px;
+}
+
+.contact-actions {
+  margin-top: 36px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-contact-primary {
+  background: white;
+  color: var(--dark);
+}
+
+.btn-contact-primary:hover { background: #dde5ec; }
+
+.btn-contact-secondary {
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+}
+
+.btn-contact-secondary:hover { background: rgba(255,255,255,0.08); }
+
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
+footer {
+  background: var(--darker);
+  color: rgba(255,255,255,0.32);
+  padding: 24px 0;
+  font-size: 0.82rem;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ═══════════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--transition), transform 0.7s var(--transition);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — TABLET (≤960px)
+═══════════════════════════════════════════ */
+@media (max-width: 960px) {
+
+  :root { --nav-h: 64px; }
+
+  .container { width: min(100% - 40px, var(--container)); }
+
+  /* Update hero background for mobile */
+  .hero-bg {
+    background-image: url('images/hero-mobile_crop_1440x1920.webp');
+  }
+
+  /* hide desktop nav, show hamburger */
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  .about-grid { grid-template-columns: 1fr; }
+  .about-image { aspect-ratio: 16/9; max-height: 420px; }
+
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .split { grid-template-columns: 1fr; }
+  .split .split-image { aspect-ratio: 16/9; }
+  .split-reversed .split-image { order: -1; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-image { aspect-ratio: 16/9; }
+
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.18); }
+  .stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.18); }
+
+  .timeline-row { grid-template-columns: 1fr; gap: 6px; }
+  .timeline-phase { padding-left: 24px; }
+
+
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — MOBILE (≤600px)
+═══════════════════════════════════════════ */
+@media (max-width: 600px) {
+
+  :root { --nav-h: 60px; }
+
+  .container { width: min(100% - 32px, var(--container)); }
+
+  section { padding: clamp(60px, 14vw, 80px) 0; }
+
+  .hero {
+    padding-top: calc(var(--nav-h) + 60px);
+    padding-bottom: 70px;
+    min-height: 100svh;
+    align-items: flex-end;
+  }
+
+  .hero h1 { font-size: clamp(2.8rem, 11vw, 4.2rem); }
+  .hero p { font-size: 0.93rem; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .hero-actions .btn { width: 100%; text-align: center; }
+
+  .feature-grid { grid-template-columns: 1fr; }
+  .feature { padding: 28px 24px; }
+
+  .section-title { font-size: clamp(2rem, 9vw, 3rem); }
+
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+
+  .contact-line {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  footer .container { justify-content: center; text-align: center; }
+}
+
+/* ═══════════════════════════════════════════
+   PRINT / PDF EXPORT STYLES
+═══════════════════════════════════════════ */
+@media print {
+  /* Hide interactive web elements */
+  nav, #progress-bar, .hero-scroll, .mobile-menu, .btn {
+    display: none !important;
+  }
+  
+  /* Reset background and text for print */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  /* Ensure backgrounds print correctly */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Format spacing for paper */
+  section {
+    padding: 40px 0 !important;
+    page-break-inside: avoid;
+  }
+  
+  /* Convert dark sections to light for better printing readability, or keep them if branding dictates */
+  .section-dark, .section-darker, .stats-band, .contact-section {
+    background: #f4f4f1 !important;
+    color: #14202d !important;
+  }
+  
+  .section-dark .section-text, .section-darker .section-text, .contact-line, .stat-label {
+    color: #556070 !important;
+  }
+
+  .section-dark .section-title { color: #14202d !important; }
+  
+  .stat-num { color: #1d5a8a !important; }
+
+  /* Avoid awkward page breaks inside cards */
+  .feature, .timeline-row, .about-point, .list-item {
+    page-break-inside: avoid;
+  }
+  
+  /* Reset hero for print */
+  .hero {
+    min-height: auto !important;
+    padding: 60px 0 !important;
+    page-break-after: always;
+  }
+  
+  .hero-overlay { display: none; }
+  .hero-content { color: black !important; }
+  .hero h1, .hero p, .hero-kicker { color: black !important; text-shadow: none !important; }
+  .hero h1 em { color: #556070 !important; }
+}
+
+/* ═══════════════════════════════════════════
+   PRINT / REDUCED MOTION
+═══════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<nav id="main-nav">
+  <div class="container nav-inner">
+
+    <a href="https://www.mth-mv.com" class="logo" aria-label="MT Højgaard Home">
+      <img src="images/repair/navbar-MTH-Logo_blue.svg" alt="MT Højgaard" onerror="this.style.display='none'">
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#capabilities" class="nav-link-item">Capabilities</a></li>
+      <li><a href="#methodology" class="nav-link-item">Methodology</a></li>
+      <li><a href="#execution" class="nav-link-item">Execution</a></li>
+      <li><a href="#delivery" class="nav-link-item">Delivery</a></li>
+      <li><a href="#contact" class="nav-link-item">Contact</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="#capabilities" class="mobile-nav-item">Capabilities</a>
+  <a href="#methodology" class="mobile-nav-item">Methodology</a>
+  <a href="#execution" class="mobile-nav-item">Execution</a>
+  <a href="#delivery" class="mobile-nav-item">Delivery</a>
+  <a href="#contact" class="mobile-nav-item">Contact</a>
+</div>
+
+
+
+<section class="hero" id="hero" data-section="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+
+    <div class="hero-kicker">Marine Infrastructure · Structural Rehabilitation · Maldives</div>
+
+    <h1>
+      Marine Structural<br>
+      <em>Repair &</em><br>
+      Rehabilitation
+    </h1>
+
+    <p>
+      Engineered repair methodologies for water villas, resort jetties, and marine concrete infrastructure operating in aggressive saltwater environments.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#capabilities" class="btn btn-primary">Explore Capabilities</a>
+      <a href="#contact" class="btn btn-secondary">Contact Us</a>
+    </div>
+
+  </div>
+  <div class="hero-scroll" aria-hidden="true">Scroll</div>
+</section>
+
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item reveal">
+        <div class="stat-num">25+</div>
+        <div class="stat-label">Years Marine Experience</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num">150+</div>
+        <div class="stat-label">Marine Projects</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num">EN 1504</div>
+        <div class="stat-label">Certified Methodology</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-num">MV</div>
+        <div class="stat-label">Maldives Operations</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="capabilities" data-section="capabilities">
+  <div class="container about-grid">
+
+    <div class="about-image reveal">
+      <picture>
+        <source media="(max-width: 960px)" srcset="images/repair/section_capabilities-mobile-crap_1600x900.webp">
+        <img src="images/repair/section_capabilities-desktop_1200x1500.webp" alt="Marine structural repair works" loading="lazy">
+      </picture>
+    </div>
+
+    <div>
+      <div class="eyebrow reveal">International Marine Expertise</div>
+
+      <h2 class="section-title reveal reveal-delay-1">
+        Engineered Solutions for Complex Marine Structures
+      </h2>
+
+      <p class="section-text reveal reveal-delay-2">
+        MT Højgaard delivers specialized structural repair and rehabilitation solutions for marine infrastructure across the Maldives. Our methodology combines international engineering standards with practical execution expertise in live overwater environments.
+      </p>
+
+      <div class="about-points">
+        <div class="about-point reveal reveal-delay-2">
+          <h4>Water Villas & Resort Infrastructure</h4>
+          <p>Repair and rehabilitation of beam systems, structural joints, and reinforced concrete components exposed to marine deterioration.</p>
+        </div>
+        <div class="about-point reveal reveal-delay-3">
+          <h4>Marine Logistics Capability</h4>
+          <p>Integrated pontoon, diving, and shallow-water access systems designed for remote and difficult-access environments.</p>
+        </div>
+        <div class="about-point reveal reveal-delay-4">
+          <h4>International Standards</h4>
+          <p>Execution aligned with ACI 224R and BS EN 1504 methodologies for crack assessment, structural rehabilitation, and quality assurance.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-soft">
+  <div class="container">
+
+    <div class="eyebrow reveal">Marine Structural Challenges</div>
+    <h2 class="section-title reveal reveal-delay-1">
+      Long-Term Durability in Aggressive Saltwater Environments
+    </h2>
+    <p class="section-text reveal reveal-delay-2">
+      Structural deterioration in marine resort environments requires more than cosmetic repair. Effective rehabilitation demands engineered intervention strategies, controlled execution methods, and long-term protection systems.
+    </p>
+
+    <div class="feature-grid">
+      <div class="feature reveal reveal-delay-1">
+        <div class="feature-number">01</div>
+        <h3>Chloride Corrosion</h3>
+        <p>Continuous saltwater exposure accelerates reinforcement corrosion, concrete cracking, and long-term structural degradation that compounds without intervention.</p>
+      </div>
+      <div class="feature reveal reveal-delay-2">
+        <div class="feature-number">02</div>
+        <h3>Structural Movement</h3>
+        <p>Wave action, vibration, and cyclic loading introduce movement stresses that impact beam performance and joint integrity over time.</p>
+      </div>
+      <div class="feature reveal reveal-delay-3">
+        <div class="feature-number">03</div>
+        <h3>Operational Constraints</h3>
+        <p>Repair execution in active resort environments requires controlled logistics, low-impact operations, and dedicated marine access planning.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="methodology" data-section="methodology">
+  <div class="container split">
+
+    <div>
+      <div class="eyebrow reveal">Repair Methodology</div>
+      <h2 class="section-title reveal reveal-delay-1">
+        Structured Rehabilitation Methodology
+      </h2>
+      <p class="section-text reveal reveal-delay-2">
+        Every repair operation follows a structured engineering process focused on assessment, repair durability, and long-term structural performance.
+      </p>
+
+      <div class="list reveal reveal-delay-2">
+        <div class="list-item">
+          <span>Assessment</span>
+          <p>Detailed crack mapping, structural classification, and repair strategy selection based on site conditions and deterioration severity.</p>
+        </div>
+        <div class="list-item">
+          <span>Structural Repair</span>
+          <p>Controlled concrete removal, reinforcement treatment, bonding systems, and high-strength repair mortar application.</p>
+        </div>
+        <div class="list-item">
+          <span>Surface Protection</span>
+          <p>Protective coating systems and durability treatments designed for aggressive marine exposure conditions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="split-image reveal reveal-delay-2">
+      <img src="images/repair/section_methodology2_1920x1200.webp" alt="Marine repair operations" loading="lazy">
+    </div>
+
+  </div>
+</section>
+
+<section class="section-soft split-reversed" id="execution" data-section="execution">
+  <div class="container split">
+
+    <div class="split-image reveal">
+      <img src="images/repair/section_execution_1920x1200.webp" alt="Jetty reinforcement works" loading="lazy">
+    </div>
+
+    <div>
+      <div class="eyebrow reveal">Marine Execution</div>
+      <h2 class="section-title reveal reveal-delay-1">
+        Beam Replacement & Jetty Reinforcement
+      </h2>
+      <p class="section-text reveal reveal-delay-2">
+        Complex marine rehabilitation works require integrated logistics systems, temporary support methodologies, and specialized lifting operations.
+      </p>
+
+      <div class="list reveal reveal-delay-2">
+        <div class="list-item">
+          <span>Floating Logistics</span>
+          <p>Use of modular pontoons and controlled marine transport systems for beam removal and installation operations.</p>
+        </div>
+        <div class="list-item">
+          <span>Structural Reinforcement</span>
+          <p>Additional intermediate columns reduce long-span beam stresses and improve long-term structural performance.</p>
+        </div>
+        <div class="list-item">
+          <span>Low-Impact Operations</span>
+          <p>Execution methodologies designed to minimize environmental impact, vibration transmission, and operational disruption.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="delivery" data-section="delivery">
+  <div class="container">
+
+    <div class="eyebrow reveal">Project Delivery</div>
+    <h2 class="section-title reveal reveal-delay-1">
+      Controlled Execution Strategy
+    </h2>
+    <p class="section-text reveal reveal-delay-2">
+      Repair operations are executed through a phased delivery structure that prioritizes quality assurance, safety, and operational efficiency.
+    </p>
+
+    <div class="timeline reveal reveal-delay-2">
+      <div class="timeline-row">
+        <div class="timeline-phase">Phase 01</div>
+        <div class="timeline-content">
+          <h3>Assessment & Technical Planning</h3>
+          <p>Condition surveys, crack classification, repair sequencing, and marine logistics planning prior to mobilization.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-phase">Phase 02</div>
+        <div class="timeline-content">
+          <h3>Mobilization & Temporary Support Systems</h3>
+          <p>Deployment of marine access platforms, scaffolding systems, lifting arrangements, and temporary structural supports.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-phase">Phase 03</div>
+        <div class="timeline-content">
+          <h3>Parallel Repair Execution</h3>
+          <p>Sectorized repair operations across water villas, jetties, and supporting infrastructure to optimize project duration.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-phase">Phase 04</div>
+        <div class="timeline-content">
+          <h3>Validation & Handover</h3>
+          <p>Post-repair inspections, quality assurance verification, curing validation, and final client documentation.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-section" id="contact" data-section="contact">
+  <div class="container contact-grid">
+
+    <div>
+      <div class="eyebrow reveal">MT Højgaard Pvt Ltd Maldives</div>
+      <h2 class="section-title reveal reveal-delay-1">
+        Let's Restore & Protect Your Marine Infrastructure
+      </h2>
+      <p class="section-text reveal reveal-delay-2">
+        Specialized structural rehabilitation solutions for water villas, resort jetties, bridges, and marine concrete infrastructure across the Maldives.
+      </p>
+
+      <div class="contact-box reveal reveal-delay-2">
+        <div class="contact-line">
+          <strong>Managing Director</strong>
+          Niels Brock Ulrich
+        </div>
+        <div class="contact-line">
+          <strong>Telephone</strong>
+          <a href="tel:+9607940680" style="color:inherit">+960 794 0680</a>
+        </div>
+        <div class="contact-line">
+          <strong>Website</strong>
+          <a href="https://www.mth-mv.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.82)">www.mth-mv.com</a>
+        </div>
+        <div class="contact-line">
+          <strong>Office</strong>
+          5th Floor Filigasdhoshuge Building, Ameer Ahmed Magu, Malé, Maldives
+        </div>
+    </div>
+
+    <div class="contact-image reveal reveal-delay-2">
+      <img src="images/repair/section_contacts_1920x1200.webp" alt="Marine infrastructure rehabilitation" loading="lazy">
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>© 2026 MT Højgaard Pvt Ltd Maldives — Marine Structural Repair & Rehabilitation</span>
+    <span>Malé, Maldives · <a href="https://www.mth-mv.com" target="_blank" rel="noopener" style="color:inherit">mth-mv.com</a></span>
+  </div>
+</footer>
+
+<script>
+/* ── Sections & Nav IDs ── */
+const SECTIONS = ['hero','capabilities','methodology','execution','delivery','contact'];
+
+/* ── Progress Bar ── */
+const progressBar = document.getElementById('progress-bar');
+function updateProgress() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progressBar.style.width = pct + '%';
+}
+
+/* ── Nav scroll shadow ── */
+const mainNav = document.getElementById('main-nav');
+function updateNav() {
+  mainNav.classList.toggle('scrolled', window.scrollY > 20);
+}
+
+/* ── Active section tracking ── */
+const navLinks = document.querySelectorAll('.nav-link-item');
+const mobilNavLinks = document.querySelectorAll('.mobile-nav-item');
+
+function getActiveSection() {
+  const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) + 40;
+  let active = SECTIONS[0];
+  for (const id of SECTIONS) {
+    const el = document.getElementById(id);
+    if (!el) continue;
+    if (el.getBoundingClientRect().top <= navH) active = id;
+  }
+  return active;
+}
+
+function updateActiveStates() {
+  const active = getActiveSection();
+
+  navLinks.forEach(a => {
+    const href = a.getAttribute('href');
+    if (href) a.classList.toggle('active', href.replace('#','') === active);
+  });
+
+  mobilNavLinks.forEach(a => {
+    const href = a.getAttribute('href');
+    if (href) a.classList.toggle('active', href.replace('#','') === active);
+  });
+}
+
+/* ── Scroll Reveal ── */
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+revealEls.forEach(el => revealObserver.observe(el));
+
+/* ── Hero parallax bg ── */
+const heroBg = document.getElementById('heroBg');
+setTimeout(() => heroBg && heroBg.classList.add('loaded'), 100);
+
+/* ── Unified scroll handler ── */
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      updateProgress();
+      updateNav();
+      updateActiveStates();
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
+
+// Initial state
+updateProgress(); updateNav(); updateActiveStates();
+
+/* ── Hamburger / Mobile Menu ── */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+function closeMobileMenu() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', () => {
+  const isOpen = hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+  mobileMenu.setAttribute('aria-hidden', !isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+document.querySelectorAll('.mobile-nav-item').forEach(a => {
+  a.addEventListener('click', closeMobileMenu);
+});
+
+/* ── Smooth anchor nav ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

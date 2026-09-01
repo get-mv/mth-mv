@@ -133,6 +133,146 @@ p { line-height: var(--line-height-body); color: var(--text-muted); }
 .nav-cta::after { display: none !important; }
 .nav-cta:hover { background: var(--accent-light) !important; color: var(--brand-dark) !important; }
 
+
+/* Workshop dropdown */
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,0.75);
+  text-transform: uppercase;
+  font-family: var(--font-main);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.nav-dropdown-toggle::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.nav-dropdown-toggle:hover,
+.nav-dropdown.open .nav-dropdown-toggle {
+  color: var(--white);
+}
+.nav-dropdown-toggle:hover::after,
+.nav-dropdown.open .nav-dropdown-toggle::after {
+  transform: scaleX(1);
+}
+.nav-chevron {
+  color: var(--accent);
+  font-size: 0.95rem;
+  line-height: 1;
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+.nav-dropdown.open .nav-chevron {
+  transform: rotate(180deg) translateY(1px);
+}
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 0;
+  min-width: 185px;
+  padding: 7px;
+  background: rgba(0,20,50,0.98);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-top: 2px solid var(--accent);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.22);
+  backdrop-filter: blur(12px);
+  border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu,
+.nav-dropdown.open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.nav-dropdown-menu a {
+  display: block;
+  padding: 11px 13px;
+  color: rgba(255,255,255,0.78);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+}
+.nav-dropdown-menu a::after {
+  display: none;
+}
+.nav-dropdown-menu a:hover {
+  color: var(--white);
+  background: rgba(184,146,58,0.12);
+}
+
+/* Mobile Workshop submenu */
+.mobile-workshop-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  padding: 15px clamp(20px, 5vw, 60px);
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.mobile-workshop-toggle:hover {
+  color: var(--accent);
+  background: rgba(255,255,255,0.03);
+}
+.mobile-chevron {
+  color: var(--accent);
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+.mobile-workshop-toggle.open .mobile-chevron {
+  transform: rotate(180deg);
+}
+.mobile-workshop-submenu {
+  display: none;
+  flex-direction: column;
+  background: rgba(0,10,30,0.55);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.mobile-workshop-submenu.open {
+  display: flex;
+}
+.mobile-workshop-submenu a {
+  padding: 13px clamp(20px, 5vw, 60px) 13px calc(clamp(20px, 5vw, 60px) + 18px);
+  color: rgba(255,255,255,0.62);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
 /* Hamburger */
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; }
 .hamburger span { width: 22px; height: 2px; background: var(--white); border-radius: 2px; display: block; transition: all 0.3s; }
@@ -833,6 +973,16 @@ footer {
       <li><a href="#precast">Precast</a></li>
       <li><a href="#solutions">Solutions</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+          Workshop <span class="nav-chevron" aria-hidden="true">⌄</span>
+        </button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="/workshop/#capabilities" role="menuitem">Capabilities</a>
+          <a href="/workshop/#projects" role="menuitem">Projects</a>
+          <a href="/workshop/#for-sale" role="menuitem">For Sale</a>
+        </div>
+      </li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -846,6 +996,14 @@ footer {
   <a href="#precast" onclick="closeMenu()">Precast</a>
   <a href="#solutions" onclick="closeMenu()">Solutions</a>
   <a href="#projects" onclick="closeMenu()">Projects</a>
+  <button class="mobile-workshop-toggle" id="mobileWorkshopToggle" type="button" aria-expanded="false">
+    Workshop <span class="mobile-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <div class="mobile-workshop-submenu" id="mobileWorkshopSubmenu">
+    <a href="/workshop/#capabilities" onclick="closeMenu()">Capabilities</a>
+    <a href="/workshop/#projects" onclick="closeMenu()">Projects</a>
+    <a href="/workshop/#for-sale" onclick="closeMenu()">For Sale</a>
+  </div>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </nav>
 
@@ -1435,15 +1593,63 @@ footer {
     navbar.classList.toggle('scrolled', window.scrollY > 40);
   });
 
-  // Mobile menu
+  // Navigation
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const navDropdown = document.querySelector('.nav-dropdown');
+  const navDropdownToggle = document.querySelector('.nav-dropdown-toggle');
+  const mobileWorkshopToggle = document.getElementById('mobileWorkshopToggle');
+  const mobileWorkshopSubmenu = document.getElementById('mobileWorkshopSubmenu');
+
   function toggleMenu() {
-    document.getElementById('hamburger').classList.toggle('open');
-    document.getElementById('mobileMenu').classList.toggle('open');
+    const isOpen = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
   }
+
   function closeMenu() {
-    document.getElementById('hamburger').classList.remove('open');
-    document.getElementById('mobileMenu').classList.remove('open');
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    if (mobileWorkshopToggle && mobileWorkshopSubmenu) {
+      mobileWorkshopToggle.classList.remove('open');
+      mobileWorkshopSubmenu.classList.remove('open');
+      mobileWorkshopToggle.setAttribute('aria-expanded', 'false');
+    }
   }
+
+  if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+
+  if (navDropdownToggle && navDropdown) {
+    navDropdownToggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = navDropdown.classList.toggle('open');
+      navDropdownToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+
+  if (mobileWorkshopToggle && mobileWorkshopSubmenu) {
+    mobileWorkshopToggle.addEventListener('click', () => {
+      const isOpen = mobileWorkshopSubmenu.classList.toggle('open');
+      mobileWorkshopToggle.classList.toggle('open', isOpen);
+      mobileWorkshopToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+
+  document.addEventListener('click', (event) => {
+    if (navDropdown && !navDropdown.contains(event.target)) {
+      navDropdown.classList.remove('open');
+      if (navDropdownToggle) navDropdownToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      if (navDropdown) navDropdown.classList.remove('open');
+      if (navDropdownToggle) navDropdownToggle.setAttribute('aria-expanded', 'false');
+      closeMenu();
+    }
+  });
 
   // Scroll reveal
   const revealObs = new IntersectionObserver((entries) => {

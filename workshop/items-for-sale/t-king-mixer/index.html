@@ -107,7 +107,7 @@ footer{padding:28px 24px;background:var(--marine-dark);color:rgba(255,255,255,.5
 <button class="thumbnail active" data-index="0" aria-label="View photo 1"><img src="https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/images/Photo01.webp" alt="T-King Concrete Mixer Truck photo 1"></button>
 <button class="thumbnail" data-index="1" aria-label="View photo 2"><img src="https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/images/Photo02.webp" alt="T-King Concrete Mixer Truck photo 2"></button>
 <button class="thumbnail" data-index="2" aria-label="View photo 3"><img src="https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/images/Photo03.webp" alt="T-King Concrete Mixer Truck photo 3"></button>
-<button class="thumbnail" data-index="3" aria-label="View photo 4"><img src="https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/Photo04.webp" alt="T-King Concrete Mixer Truck photo 4"></button>
+<button class="thumbnail" data-index="3" aria-label="View photo 4"><img src="https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/images/Photo04.webp" alt="T-King Concrete Mixer Truck photo 4"></button>
 </div>
 </div>
 
@@ -181,7 +181,7 @@ footer{padding:28px 24px;background:var(--marine-dark);color:rgba(255,255,255,.5
 <footer><div class="footer-inner"><span>© MTH Maldives. Workshop Items for Sale.</span><a href="https://mth-mv.com/workshop/">Back to MTH Workshop →</a></div></footer>
 
 <script>
-const images=["https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/Photo01.webp","https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/Photo02.webp","https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/Photo03.webp","https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/Photo04.webp"];
+const images=["https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/images/Photo01.webp","https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/images/Photo02.webp","https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/images/Photo03.webp","https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/images/Photo04.webp"];
 const mainImage=document.getElementById("mainImage"),mainImageContainer=document.getElementById("mainImageContainer"),thumbnails=document.querySelectorAll(".thumbnail"),lightbox=document.getElementById("lightbox"),lightboxImage=document.getElementById("lightboxImage"),lightboxClose=document.getElementById("lightboxClose"),lightboxPrev=document.getElementById("lightboxPrev"),lightboxNext=document.getElementById("lightboxNext"),imageCounter=document.getElementById("imageCounter");
 let currentIndex=0;
 function showImage(index){currentIndex=index;mainImage.src=images[index];lightboxImage.src=images[index];imageCounter.textContent=`${index+1} / ${images.length}`;thumbnails.forEach((t,i)=>t.classList.toggle("active",i===index))}

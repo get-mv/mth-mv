@@ -115,7 +115,19 @@
     .sale-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,20,45,.75),transparent 60%)}
     .sale-tag{position:absolute;z-index:2;top:12px;left:12px;padding:5px 9px;background:var(--gold);color:var(--navy-2);font-size:.58rem;font-weight:900;text-transform:uppercase;letter-spacing:.13em;border-radius:2px}
     .sale-placeholder{position:absolute;inset:0;z-index:1;display:grid;place-items:center;color:rgba(255,255,255,.75);font-size:.67rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-    .sale-body{padding:20px 22px}.sale-body h3{font-size:1.04rem;color:var(--navy);margin-bottom:7px}.sale-body p{font-size:.82rem;margin-bottom:13px}.sale-link{color:var(--navy);font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    .sale-body{padding:20px 22px}
+    .sale-body h3{font-size:1.04rem;color:var(--navy);margin-bottom:7px}
+    .sale-body p{font-size:.82rem;margin-bottom:13px}
+    .sale-meta{display:grid;gap:5px;margin:0 0 17px;padding-top:2px}
+    .sale-meta-row{display:flex;flex-wrap:wrap;gap:6px 9px;align-items:baseline;font-size:.72rem;line-height:1.45}
+    .sale-meta-label{color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.6rem}
+    .sale-price{margin-top:3px;color:var(--navy);font-size:1.22rem;line-height:1.15;font-weight:900;letter-spacing:-.025em}
+    .sale-tax{display:block;margin-top:3px;color:var(--muted);font-size:.68rem;font-style:italic;font-weight:600}
+    .sale-price-status{margin-top:3px;color:var(--navy);font-size:.92rem;line-height:1.35;font-weight:800}
+    .sale-price-status.pending{color:var(--muted)}
+    .sale-price-status.contact{color:var(--navy)}
+    .sale-price-note{display:block;margin-top:3px;color:var(--muted);font-size:.68rem;font-style:italic;font-weight:600}
+    .sale-link{color:var(--navy);font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
     .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch}
     .contact-card{padding:40px;background:var(--navy);border-radius:var(--radius);position:relative;overflow:hidden}
     .contact-card::after{content:"";position:absolute;right:-80px;bottom:-90px;width:260px;height:260px;border:1px solid rgba(184,146,58,.25);border-radius:50%;box-shadow:0 0 0 30px rgba(184,146,58,.03),0 0 0 60px rgba(184,146,58,.02)}
@@ -282,151 +294,7 @@
         <h2>Equipment &amp; Assets Available for Sale</h2>
         <p>Selected workshop and project assets currently available for sale are shown below. Each listing provides a brief overview, with item-specific details available on enquiry.</p>
       </div>
-      <div class="sale-grid">
-        <a class="sale-card reveal" href="https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/">
-          <div class="sale-thumb">
-            <img src="https://www.mth-mv.com/workshop/items-for-sale/ThN 108-006 T-King Mixer Truck.webp" alt="T-King 2 CBM Mixer Truck">
-            <span class="sale-tag">For Sale</span>
-          </div>
-          <div class="sale-body">
-            <h3>T-King 2 CBM Mixer Truck</h3>
-            <p>A T-King 2 CBM concrete mixer truck suitable for concrete mixing and transport operations. Contact the workshop team for specifications, condition, operating history, availability and sales information.</p>
-            <span class="sale-link">View Item →</span>
-          </div>
-        </a>
-
-        <a class="sale-card reveal" style="transition-delay:.05s" href="https://www.mth-mv.com/workshop/items-for-sale/cat-312C-excavator/">
-          <div class="sale-thumb">
-            <img src="items-for-sale/ThN 100-010 Caterpillar 312-C.webp" alt="Caterpillar 312-C excavator">
-            <span class="sale-tag">For Sale</span>
-          </div>
-          <div class="sale-body">
-            <h3>Caterpillar 312-C Excavator</h3>
-            <p>Caterpillar 312-C hydraulic excavator offered as a used heavy-equipment asset. Suitable for excavation, earthworks and general construction applications, subject to inspection and condition.</p>
-            <span class="sale-link">View Item →</span>
-          </div>
-        </a>
-
-        <a class="sale-card reveal" style="transition-delay:.1s" href="https://www.mth-mv.com/workshop/items-for-sale/cat-980H-wheel-loader/">
-          <div class="sale-thumb">
-            <img src="https://www.mth-mv.com/workshop/items-for-sale/ThN 101-006 Caterpillar 980-H.webp" alt="Caterpillar 980-H wheel loader">
-            <span class="sale-tag">For Sale</span>
-          </div>
-          <div class="sale-body">
-            <h3>Caterpillar 980-H Wheel Loader</h3>
-            <p>Caterpillar 980-H wheel loader available for sale. A heavy-duty loading machine suited to material handling, aggregate operations and demanding construction-site work.</p>
-            <span class="sale-link">View Item →</span>
-          </div>
-        </a>
-
-        <a class="sale-card reveal" style="transition-delay:.15s" href="https://www.mth-mv.com/workshop/items-for-sale/cat-988H-wheel-loader/">
-          <div class="sale-thumb">
-            <img src="https://www.mth-mv.com/workshop/items-for-sale/ThN 101-007 Caterpillar 988 H.webp" alt="Caterpillar 988 H wheel loader">
-            <span class="sale-tag">For Sale</span>
-          </div>
-          <div class="sale-body">
-            <h3>Caterpillar 988-H Wheel Loader</h3>
-            <p>Caterpillar 988-H heavy wheel loader offered for sale. Built for high-volume material handling and heavy-duty loading applications; details are available from the workshop team.</p>
-            <span class="sale-link">View Item →</span>
-          </div>
-        </a>
-
-        <a class="sale-card reveal" style="transition-delay:.2s" href="https://www.mth-mv.com/workshop/items-for-sale/cat-216B-skid-steer-loader/">
-          <div class="sale-thumb">
-            <img src="https://www.mth-mv.com/workshop/items-for-sale/ThN 101-009 Cat 216B.webp" alt="Caterpillar 216B skid steer loader">
-            <span class="sale-tag">For Sale</span>
-          </div>
-          <div class="sale-body">
-            <h3>Cat 216-B Skid Steer Loader</h3>
-            <p>Cat 216B compact skid steer loader suitable for general site work, material handling and applications where manoeuvrability and a compact machine footprint are important.</p>
-            <span class="sale-link">View Item →</span>
-          </div>
-        </a>
-
-        <a class="sale-card reveal" style="transition-delay:.25s" href="https://www.mth-mv.com/workshop/items-for-sale/nardi-atlantic100/">
-          <div class="sale-thumb">
-            <img src="https://www.mth-mv.com/workshop/items-for-sale/ThN 001 Nardi Atlantic 100.webp" alt="Nardi Atlantic 100 compressor">
-            <span class="sale-tag">For Sale</span>
-          </div>
-          <div class="sale-body">
-            <h3>Nardi Atlantic 100</h3>
-            <p>Nardi Atlantic 100 equipment unit available for sale. Contact the workshop team for the unit's technical specifications, condition, service history and current availability.</p>
-            <span class="sale-link">View Item →</span>
-          </div>
-        </a>
-
-        <a class="sale-card reveal" style="transition-delay:.3s" href="https://www.mth-mv.com/workshop/items-for-sale/nardi-atlantic100-unit02/">
-          <div class="sale-thumb">
-            <img src="https://www.mth-mv.com/workshop/items-for-sale/ThN 002 Nardi Atlantic 100.webp" alt="Nardi Atlantic 100 compressor">
-            <span class="sale-tag">For Sale</span>
-          </div>
-          <div class="sale-body">
-            <h3>Nardi Atlantic 100 — Unit 2</h3>
-            <p>Second Nardi Atlantic 100 unit offered as a separate sale item. Specifications, operating condition, service history and availability can be confirmed with the workshop team.</p>
-            <span class="sale-link">View Item →</span>
-          </div>
-        </a>
-
-        <a class="sale-card reveal" style="transition-delay:.35s" href="https://www.mth-mv.com/workshop/items-for-sale/colti-mch6-dive-compressor/">
-          <div class="sale-thumb">
-            <img src="https://www.mth-mv.com/workshop/items-for-sale/ThN 003 Coltri MCH 6 Dive Compressor.webp" alt="Coltri MCH 6 dive compressor">
-            <span class="sale-tag">For Sale</span>
-          </div>
-          <div class="sale-body">
-            <h3>Coltri MCH 6 Dive Compressor</h3>
-            <p>Coltri MCH 6 dive compressor offered for sale. Suitable for compressed-air support in diving operations; buyers can contact the workshop for technical details and condition information.</p>
-            <span class="sale-link">View Item →</span>
-          </div>
-        </a>
-
-        <a class="sale-card reveal" style="transition-delay:.4s" href="https://www.mth-mv.com/workshop/items-for-sale/hitachi-zx210-excavator/">
-          <div class="sale-thumb">
-            <span class="sale-tag">For Sale</span>
-            <span class="sale-placeholder">Photo Coming Soon</span>
-          </div>
-          <div class="sale-body">
-            <h3>Hitachi ZX 210 Excavator</h3>
-            <p>Hitachi ZX 210 excavator available as a used heavy-equipment asset. Suitable for excavation and general construction applications. Photo and detailed specifications will be added when available.</p>
-            <span class="sale-link">View Item →</span>
-          </div>
-        </a>
-
-        <a class="sale-card reveal" style="transition-delay:.45s" href="https://www.mth-mv.com/workshop/items-for-sale/jcb3-cx/">
-          <div class="sale-thumb">
-            <span class="sale-tag">For Sale</span>
-            <span class="sale-placeholder">Photo Coming Soon</span>
-          </div>
-          <div class="sale-body">
-            <h3>JCB 3-CX</h3>
-            <p>JCB 3-CX backhoe loader offered for sale, suitable for general construction, excavation and material-handling work. Photo and detailed specifications will be added when available.</p>
-            <span class="sale-link">View Item →</span>
-          </div>
-        </a>
-
-        <a class="sale-card reveal" style="transition-delay:.5s" href="https://www.mth-mv.com/workshop/items-for-sale/tire-change-machine/">
-          <div class="sale-thumb">
-            <span class="sale-tag">For Sale</span>
-            <span class="sale-placeholder">Photo Coming Soon</span>
-          </div>
-          <div class="sale-body">
-            <h3>Tire Change Machine</h3>
-            <p>Tire change machine available as a workshop equipment asset. Suitable for tyre removal and fitting work; technical specifications, condition and availability will be confirmed by the workshop team.</p>
-            <span class="sale-link">View Item →</span>
-          </div>
-        </a>
-
-        <a class="sale-card reveal" style="transition-delay:.55s" href="https://www.mth-mv.com/workshop/items-for-sale/pvc-pipes-and-fittings/">
-          <div class="sale-thumb">
-         	<img src="https://www.mth-mv.com/workshop/items-for-sale/ThN 0012 PVC Pipes.webp" alt="PVC Pipes and Fittings">
-      		<span class="sale-tag">For Sale</span>
-          </div>
-          <div class="sale-body">
-            <h3>PVC Pipes &amp; Fittings</h3>
-            <p>Available PVC pipes and fittings for sale as a materials lot. Suitable for relevant construction and utility applications; sizes, quantities, condition and availability can be confirmed on enquiry.</p>
-            <span class="sale-link">View Item →</span>
-          </div>
-        </a>
-      </div>
+      <div class="sale-grid" id="equipment-sale-grid" aria-live="polite"></div>
     </div>
   </section>
 
@@ -497,6 +365,44 @@
   </footer>
 
   <script>
+    const equipmentForSale = [
+      {id:"t-king-mixer",name:"T-King 2 CBM Mixer Truck",category:"Concrete Mixer Truck",condition:"On enquiry",image:"https://www.mth-mv.com/workshop/items-for-sale/ThN 108-006 T-King Mixer Truck.webp",imageAlt:"T-King 2 CBM Mixer Truck",href:"https://www.mth-mv.com/workshop/items-for-sale/t-king-mixer/",description:"A T-King 2 CBM concrete mixer truck suitable for concrete mixing and transport operations. Contact the workshop team for specifications, condition, operating history, availability and sales information.",currency:"MVR",price:"600000",taxNote:"Ex GST",priceStatus:"fixed"},
+      {id:"cat-312C-excavator",name:"Caterpillar 312-C Excavator",category:"Hydraulic Excavator",condition:"Used — inspection advised",image:"items-for-sale/ThN 100-010 Caterpillar 312-C.webp",imageAlt:"Caterpillar 312-C excavator",href:"https://www.mth-mv.com/workshop/items-for-sale/cat-312C-excavator/",description:"Caterpillar 312-C hydraulic excavator offered as a used heavy-equipment asset. Suitable for excavation, earthworks and general construction applications, subject to inspection and condition.",currency:"MVR",price:"600000",taxNote:"Ex GST",priceStatus:"fixed"},
+      {id:"cat-980H-wheel-loader",name:"Caterpillar 980-H Wheel Loader",category:"Wheel Loader",condition:"On enquiry",image:"https://www.mth-mv.com/workshop/items-for-sale/ThN 101-006 Caterpillar 980-H.webp",imageAlt:"Caterpillar 980-H wheel loader",href:"https://www.mth-mv.com/workshop/items-for-sale/cat-980H-wheel-loader/",description:"Caterpillar 980-H wheel loader available for sale. A heavy-duty loading machine suited to material handling, aggregate operations and demanding construction-site work.",currency:"MVR",price:"675000",taxNote:"Ex GST",priceStatus:"fixed"},
+      {id:"cat-988H-wheel-loader",name:"Caterpillar 988-H Wheel Loader",category:"Wheel Loader",condition:"On enquiry",image:"https://www.mth-mv.com/workshop/items-for-sale/ThN 101-007 Caterpillar 988 H.webp",imageAlt:"Caterpillar 988 H wheel loader",href:"https://www.mth-mv.com/workshop/items-for-sale/cat-988H-wheel-loader/",description:"Caterpillar 988-H heavy wheel loader offered for sale. Built for high-volume material handling and heavy-duty loading applications; details are available from the workshop team.",currency:"MVR",price:"685000",taxNote:"Ex GST",priceStatus:"fixed"},
+      {id:"cat-216B-skid-steer-loader",name:"Cat 216-B Skid Steer Loader",category:"Skid Steer Loader",condition:"On enquiry",image:"https://www.mth-mv.com/workshop/items-for-sale/ThN 101-009 Cat 216B.webp",imageAlt:"Caterpillar 216B skid steer loader",href:"https://www.mth-mv.com/workshop/items-for-sale/cat-216B-skid-steer-loader/",description:"Cat 216B compact skid steer loader suitable for general site work, material handling and applications where manoeuvrability and a compact machine footprint are important.",currency:"MVR",price:"385000",taxNote:"Ex GST",priceStatus:"fixed"},
+      {id:"nardi-atlantic100",name:"Nardi Atlantic 100",category:"Dive Compressor",condition:"On enquiry",image:"https://www.mth-mv.com/workshop/items-for-sale/ThN 001 Nardi Atlantic 100.webp",imageAlt:"Nardi Atlantic 100 compressor",href:"https://www.mth-mv.com/workshop/items-for-sale/nardi-atlantic100/",description:"Nardi Atlantic 100 equipment unit available for sale. Contact the workshop team for the unit's technical specifications, condition, service history and current availability.",currency:"MVR",price:"45000",taxNote:"Ex GST",priceStatus:"fixed"},
+      {id:"nardi-atlantic100-unit02",name:"Nardi Atlantic 100 — Unit 2",category:"Dive Compressor",condition:"On enquiry",image:"https://www.mth-mv.com/workshop/items-for-sale/ThN 002 Nardi Atlantic 100.webp",imageAlt:"Nardi Atlantic 100 compressor",href:"https://www.mth-mv.com/workshop/items-for-sale/nardi-atlantic100-unit02/",description:"Second Nardi Atlantic 100 unit offered as a separate sale item. Specifications, operating condition, service history and availability can be confirmed with the workshop team.",currency:"MVR",price:"50000",taxNote:"Ex GST",priceStatus:"fixed"},
+      {id:"colti-mch6-dive-compressor",name:"Coltri MCH 6 Dive Compressor",category:"Dive Compressor",condition:"On enquiry",image:"https://www.mth-mv.com/workshop/items-for-sale/ThN 003 Coltri MCH 6 Dive Compressor.webp",imageAlt:"Coltri MCH 6 dive compressor",href:"https://www.mth-mv.com/workshop/items-for-sale/colti-mch6-dive-compressor/",description:"Coltri MCH 6 dive compressor offered for sale. Suitable for compressed-air support in diving operations; buyers can contact the workshop for technical details and condition information.",currency:"MVR",price:"43000",taxNote:"Ex GST",priceStatus:"fixed"},
+      {id:"hitachi-zx210-excavator",name:"Hitachi ZX 210 Excavator",category:"Excavator",condition:"On enquiry",image:null,imageAlt:"",href:"https://www.mth-mv.com/workshop/items-for-sale/hitachi-zx210-excavator/",description:"Hitachi ZX 210 excavator available as a used heavy-equipment asset. Suitable for excavation and general construction applications. Photo and detailed specifications will be added when available.",currency:"MVR",price:null,taxNote:null,priceStatus:"pending",priceNote:"Price to be updated"},
+      {id:"jcb3-cx",name:"JCB 3-CX",category:"Backhoe Loader",condition:"On enquiry",image:null,imageAlt:"",href:"https://www.mth-mv.com/workshop/items-for-sale/jcb3-cx/",description:"JCB 3-CX backhoe loader offered for sale, suitable for general construction, excavation and material-handling work. Photo and detailed specifications will be added when available.",currency:"MVR",price:null,taxNote:null,priceStatus:"pending",priceNote:"Price to be updated"},
+      {id:"tire-change-machine",name:"Tire Change Machine",category:"Workshop Equipment",condition:"On enquiry",image:null,imageAlt:"",href:"https://www.mth-mv.com/workshop/items-for-sale/tire-change-machine/",description:"Tire change machine available as a workshop equipment asset. Suitable for tyre removal and fitting work; technical specifications, condition and availability will be confirmed by the workshop team.",currency:"MVR",price:null,taxNote:null,priceStatus:"pending",priceNote:"Price to be updated"},
+      {id:"pvc-pipes-and-fittings",name:"PVC Pipes & Fittings",category:"Construction Materials",condition:"On enquiry",image:"https://www.mth-mv.com/workshop/items-for-sale/ThN 0012 PVC Pipes.webp",imageAlt:"PVC Pipes and Fittings",href:"https://www.mth-mv.com/workshop/items-for-sale/pvc-pipes-and-fittings/",description:"Available PVC pipes and fittings for sale as a materials lot. Suitable for relevant construction and utility applications; sizes, quantities, condition and availability can be confirmed on enquiry.",currency:"MVR",price:null,taxNote:null,priceStatus:"contact",priceNote:"Contact for available sizes and quantities"}
+    ];
+
+    const equipmentSaleGrid = document.getElementById('equipment-sale-grid');
+    function formatMvr(value){ return `MVR ${Number(value).toLocaleString('en-US')}`; }
+    function renderPricing(equipment){
+      if(equipment.priceStatus === 'fixed') return `<div class="sale-price">${formatMvr(equipment.price)}</div><span class="sale-tax">${equipment.taxNote}</span>`;
+      if(equipment.priceStatus === 'pending') return `<div class="sale-price-status pending">${equipment.priceNote}</div>`;
+      return `<div class="sale-price-status contact">Contact for pricing</div><span class="sale-price-note">Available sizes and quantities vary.</span>`;
+    }
+    function renderEquipmentCard(equipment,index){
+      const image = equipment.image ? `<img src="${equipment.image}" alt="${equipment.imageAlt}">` : `<span class="sale-placeholder">Photo Coming Soon</span>`;
+      const action = equipment.priceStatus === 'contact' ? 'Contact for available sizes &amp; quantities →' : 'View Details →';
+      return `<a class="sale-card reveal" style="transition-delay:${Math.min(index*.05,.55)}s" href="${equipment.href}" data-equipment-id="${equipment.id}">
+        <div class="sale-thumb">${image}<span class="sale-tag">Available</span></div>
+        <div class="sale-body"><h3>${equipment.name}</h3>
+          <div class="sale-meta">
+            <div class="sale-meta-row"><span class="sale-meta-label">Type</span><span>${equipment.category}</span></div>
+            <div class="sale-meta-row"><span class="sale-meta-label">Condition</span><span>${equipment.condition}</span></div>
+            <div class="sale-meta-row"><span class="sale-meta-label">Pricing</span><span>${renderPricing(equipment)}</span></div>
+          </div>
+          <p>${equipment.description}</p><span class="sale-link">${action}</span>
+        </div>
+      </a>`;
+    }
+    equipmentSaleGrid.innerHTML = equipmentForSale.map(renderEquipmentCard).join('');
     const navbar = document.getElementById('navbar');
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');

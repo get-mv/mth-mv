@@ -219,11 +219,11 @@ p{margin:0 0 18px}
 .project-specs{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}
 .spec{border:1px solid var(--line);padding:6px 8px;font-size:10px;font-weight:700;color:var(--navy);background:#fafbfd}
 
-/* Featured */
+/* Featured technical reference */
 .featured{display:grid;grid-template-columns:1.15fr .85fr;background:var(--navy-dark);color:#fff}
-.featured-img{min-height:510px;position:relative}
-.featured-img img{height:100%;object-fit:cover}
-.featured-img:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 65%,rgba(0,30,68,.45))}
+.featured-img{height:380px;min-height:0;position:relative;overflow:hidden}
+.featured-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.featured-img:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 65%,rgba(0,30,68,.25))}
 .featured-copy{padding:54px 52px;display:flex;flex-direction:column;justify-content:center}
 .featured-copy p{color:rgba(255,255,255,.72)}
 .detail-list{margin:20px 0 28px;border-top:1px solid rgba(255,255,255,.14)}
@@ -292,7 +292,7 @@ footer p{color:rgba(255,255,255,.58);font-size:13px;max-width:470px}
   .step:nth-child(2){border-right:0}
   .step:nth-child(n+3){border-top:1px solid var(--line)}
   .project-grid{grid-template-columns:1fr}
-  .featured-img{min-height:360px}
+  .featured-img{height:320px;min-height:0}
   .footer-grid{grid-template-columns:1fr 1fr}
   .footer-grid > :first-child{grid-column:1/-1}
 }
@@ -334,39 +334,6 @@ footer p{color:rgba(255,255,255,.58);font-size:13px;max-width:470px}
   *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
   .reveal{opacity:1;transform:none}
 }
-
-
-/* MFAR Kudavillingili technical reference — portrait 10:16 image */
-#technical .featured-img{
-  min-height:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:0;
-  background:#071b32;
-  overflow:hidden;
-}
-#technical .featured-img > a{
-  display:block;
-  width:min(100%, 487px);
-  aspect-ratio:10 / 16;
-  flex:0 1 auto;
-}
-#technical .featured-img img{
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  object-position:center;
-}
-#technical .featured-img:after{display:none}
-@media (max-width:960px){
-  #technical .featured-img > a{width:min(100%, 487px)}
-}
-@media (max-width:640px){
-  #technical .featured-img > a{width:min(100%, 390px)}
-}
-
 </style>
 </head>
 <body>
@@ -704,8 +671,8 @@ footer p{color:rgba(255,255,255,.58);font-size:13px;max-width:470px}
   <div class="container">
     <div class="featured reveal">
       <div class="featured-img">
-        <a href="https://mth-mv.com/pools/images/MFAR-Technical-Reference-10x16.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size MFAR Kudavillingili technical reference photo">
-          <img src="https://mth-mv.com/pools/images/MFAR-Technical-Reference-10x16.webp" alt="MFAR Kudavillingili technical reference pool installation">
+        <a href="https://mth-mv.com/pools/images/MFAR-Technical-Reference.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size MFAR Kudavillingili technical reference photo">
+          <img src="https://mth-mv.com/pools/images/MFAR-Technical-Reference.webp" alt="MFAR Kudavillingili technical reference pool installation">
         </a>
       </div>
       <div class="featured-copy">

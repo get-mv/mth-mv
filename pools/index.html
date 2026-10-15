@@ -207,6 +207,7 @@ p{margin:0 0 18px}
 .project:hover{transform:translateY(-4px);box-shadow:var(--shadow2)}
 .project:hover:before{transform:scaleX(1)}
 .project-image{aspect-ratio:16/9;overflow:hidden;background:#dfe8f0}
+.project-image a{display:block;width:100%;height:100%}
 .project-image img{height:100%;object-fit:cover;transition:.5s}
 .project:hover .project-image img{transform:scale(1.03)}
 .project-body{padding:24px}
@@ -240,14 +241,18 @@ p{margin:0 0 18px}
   object-fit:cover;
 }
 
-/* Gallery */
-.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:210px;gap:10px}
-.gallery button{border:0;padding:0;cursor:pointer;overflow:hidden;background:#ddd;position:relative}
-.gallery button:first-child{grid-row:span 2}
-.gallery img{height:100%;object-fit:cover;transition:.45s}
-.gallery button:hover img{transform:scale(1.04)}
-.gallery button:after{content:"VIEW";position:absolute;right:10px;bottom:10px;background:rgba(0,30,68,.85);color:#fff;padding:6px 8px;font-size:9px;font-weight:800;letter-spacing:.15em;opacity:0;transition:.25s}
-.gallery button:hover:after{opacity:1}
+/* Site evidence gallery: large selected photo with an expandable thumbnail collection */
+.site-evidence-gallery{display:grid;grid-template-columns:1fr;gap:14px}
+.gallery-main{position:relative;width:100%;height:clamp(280px,58vw,620px);padding:0;border:0;overflow:hidden;cursor:zoom-in;background:#dfe8f0}
+.gallery-main img{width:100%;height:100%;object-fit:contain;background:#071b32;transition:opacity .2s ease}
+.gallery-main:after{content:"ENLARGE PHOTO";position:absolute;right:14px;bottom:14px;background:rgba(0,30,68,.88);color:#fff;padding:8px 11px;font-size:10px;font-weight:800;letter-spacing:.12em}
+.gallery-thumbnails{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.gallery-thumb{height:clamp(75px,12vw,140px);padding:0;border:2px solid transparent;cursor:pointer;overflow:hidden;background:#dfe8f0;position:relative}
+.gallery-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.gallery-thumb:hover img{transform:scale(1.05)}
+.gallery-thumb[aria-pressed="true"]{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.gallery-thumb:focus-visible,.gallery-main:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(max-width:640px){.gallery-thumbnails{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.gallery-thumb{height:90px}}
 
 /* CTA */
 .cta{background:var(--off)}
@@ -666,7 +671,9 @@ footer p{color:rgba(255,255,255,.58);font-size:13px;max-width:470px}
   <div class="container">
     <div class="featured reveal">
       <div class="featured-img">
-        <img src="https://mth-mv.com/pools/images/MFAR-Technical-Reference.webp" alt="MFAR Kudavillingili technical reference pool installation">
+        <a href="https://mth-mv.com/pools/images/MFAR-Technical-Reference.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size MFAR Kudavillingili technical reference photo">
+          <img src="https://mth-mv.com/pools/images/MFAR-Technical-Reference.webp" alt="MFAR Kudavillingili technical reference pool installation">
+        </a>
       </div>
       <div class="featured-copy">
         <p class="eyebrow">03 / Technical reference</p>
@@ -697,7 +704,7 @@ footer p{color:rgba(255,255,255,.58);font-size:13px;max-width:470px}
 
     <div class="project-grid">
       <article class="project reveal">
-        <div class="project-image"><img src="https://mth-mv.com/pools/images/Project_pools-Veligandhu.webp" alt="Aerial view of Veligandhu water villa development"></div>
+        <div class="project-image"><a href="https://mth-mv.com/pools/images/Project_pools-Veligandhu.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size photo: Aerial view of Veligandhu water villa development"><img src="https://mth-mv.com/pools/images/Project_pools-Veligandhu.webp" alt="Aerial view of Veligandhu water villa development"></a></div>
         <div class="project-body">
           <div class="project-top"><span class="project-label">Water villas</span><span class="project-year">2024</span></div>
           <h3>Veligandhu Water Villa Pools</h3>
@@ -707,7 +714,7 @@ footer p{color:rgba(255,255,255,.58);font-size:13px;max-width:470px}
       </article>
 
       <article class="project reveal">
-        <div class="project-image"><img src="https://mth-mv.com/pools/images/Project_pools-Inahuraa.webp" alt="Aerial view of Innahura resort development"></div>
+        <div class="project-image"><a href="https://mth-mv.com/pools/images/Project_pools-Inahuraa.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size photo: Aerial view of Innahura resort development"><img src="https://mth-mv.com/pools/images/Project_pools-Inahuraa.webp" alt="Aerial view of Innahura resort development"></a></div>
         <div class="project-body">
           <div class="project-top"><span class="project-label">Water + beach villas</span><span class="project-year">2024</span></div>
           <h3>Innahura Resort Pools</h3>
@@ -717,7 +724,7 @@ footer p{color:rgba(255,255,255,.58);font-size:13px;max-width:470px}
       </article>
 
       <article class="project reveal">
-        <div class="project-image"><img src="https://mth-mv.com/pools/images/Project_pools-MFAR-Kudavillingil.webp" alt="MFAR Kudavillingili precast pool installation"></div>
+        <div class="project-image"><a href="https://mth-mv.com/pools/images/Project_pools-MFAR-Kudavillingil.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size photo: MFAR Kudavillingili precast pool installation"><img src="https://mth-mv.com/pools/images/Project_pools-MFAR-Kudavillingil.webp" alt="MFAR Kudavillingili precast pool installation"></a></div>
         <div class="project-body">
           <div class="project-top"><span class="project-label">Water villas</span><span class="project-year">2024</span></div>
           <h3>MFAR Kudavillingili Pools</h3>
@@ -727,7 +734,7 @@ footer p{color:rgba(255,255,255,.58);font-size:13px;max-width:470px}
       </article>
 
       <article class="project reveal">
-        <div class="project-image"><img src="https://mth-mv.com/pools/images/Project_pools-Maabinhuraa.webp" alt="Mabinhuraa water villa pools"></div>
+        <div class="project-image"><a href="https://mth-mv.com/pools/images/Project_pools-Maabinhuraa.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size photo: Mabinhuraa water villa pools"><img src="https://mth-mv.com/pools/images/Project_pools-Maabinhuraa.webp" alt="Mabinhuraa water villa pools"></a></div>
         <div class="project-body">
           <div class="project-top"><span class="project-label">Water villas</span><span class="project-year">2021</span></div>
           <h3>Mabinhuraa Pools</h3>
@@ -737,7 +744,7 @@ footer p{color:rgba(255,255,255,.58);font-size:13px;max-width:470px}
       </article>
 
       <article class="project reveal">
-        <div class="project-image"><img src="https://mth-mv.com/pools/images/Project_pools-Kagi.webp" alt="Aerial view of Kagi Resort pools"></div>
+        <div class="project-image"><a href="https://mth-mv.com/pools/images/Project_pools-Kagi.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size photo: Aerial view of Kagi Resort pools"><img src="https://mth-mv.com/pools/images/Project_pools-Kagi.webp" alt="Aerial view of Kagi Resort pools"></a></div>
         <div class="project-body">
           <div class="project-top"><span class="project-label">Water + beach villas</span><span class="project-year">2019</span></div>
           <h3>Kagi Resort Pools</h3>
@@ -755,12 +762,18 @@ footer p{color:rgba(255,255,255,.58);font-size:13px;max-width:470px}
       <div><p class="eyebrow">05 / Site evidence</p><h2>Construction detail, not lifestyle imagery.</h2></div>
       <div><p class="lead">The supplied presentation contains aerial resort context, precast pool sections, reinforcement, formwork, lifting and completed pool installations.</p></div>
     </div>
-    <div class="gallery reveal">
-      <button type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Inahuraa.webp" aria-label="Open construction image"><img src="https://mth-mv.com/pools/images/SE_pools-Inahuraa.webp" alt="Innahura pool construction and reinforcement"></button>
-      <button type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Kagi(2).webp" aria-label="Open precast pool image"><img src="https://mth-mv.com/pools/images/SE_pools-Kagi(2).webp" alt="Precast pool section at Veligandhu"></button>
-      <button type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Mabinhuraa.webp" aria-label="Open modular pool installation image"><img src="https://mth-mv.com/pools/images/SE_pools-Mabinhuraa.webp" alt="Three-piece modular pool assembly at MFAR Kudavillingili"></button>
-      <button type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Veligandhu.webp" aria-label="Open Kagi construction image"><img src="https://mth-mv.com/pools/images/SE_pools-Veligandhu.webp" alt="Kagi pool structure under construction"></button>
-      <button type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Dherifinolhu.webp" aria-label="Open Kagi formwork image"><img src="https://mth-mv.com/pools/images/SE_pools-Dherifinolhu.webp" alt="Kagi pool formwork and reinforcement"></button>
+    <div class="site-evidence-gallery reveal" id="siteEvidenceGallery">
+      <button class="gallery-main" type="button" id="galleryMainButton" aria-label="Enlarge selected site evidence photo">
+        <img id="galleryMainImage" src="https://mth-mv.com/pools/images/SE_pools-Inahuraa.webp" alt="Innahura pool construction and reinforcement">
+      </button>
+      <div class="gallery-thumbnails" aria-label="Site evidence photo thumbnails">
+        <!-- Add future photos by duplicating a .gallery-thumb button and updating its image URL and alt text. -->
+        <button class="gallery-thumb" type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Inahuraa.webp" data-alt="Innahura pool construction and reinforcement" aria-label="Show Innahura pool construction photo" aria-pressed="true"><img src="https://mth-mv.com/pools/images/SE_pools-Inahuraa.webp" alt=""></button>
+        <button class="gallery-thumb" type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Kagi(2).webp" data-alt="Precast pool section at Kagi Resort" aria-label="Show Kagi precast pool photo" aria-pressed="false"><img src="https://mth-mv.com/pools/images/SE_pools-Kagi(2).webp" alt=""></button>
+        <button class="gallery-thumb" type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Mabinhuraa.webp" data-alt="Modular pool installation at Mabinhuraa" aria-label="Show Mabinhuraa modular pool photo" aria-pressed="false"><img src="https://mth-mv.com/pools/images/SE_pools-Mabinhuraa.webp" alt=""></button>
+        <button class="gallery-thumb" type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Veligandhu.webp" data-alt="Veligandhu pool structure under construction" aria-label="Show Veligandhu pool construction photo" aria-pressed="false"><img src="https://mth-mv.com/pools/images/SE_pools-Veligandhu.webp" alt=""></button>
+        <button class="gallery-thumb" type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Dherifinolhu.webp" data-alt="Dherifinolhu pool formwork and reinforcement" aria-label="Show Dherifinolhu formwork photo" aria-pressed="false"><img src="https://mth-mv.com/pools/images/SE_pools-Dherifinolhu.webp" alt=""></button>
+      </div>
     </div>
   </div>
 </section>
@@ -852,13 +865,21 @@ footer p{color:rgba(255,255,255,.58);font-size:13px;max-width:470px}
 
   const modal=document.getElementById('imageModal');
   const modalImage=document.getElementById('modalImage');
+  const galleryMainButton=document.getElementById('galleryMainButton');
+  const galleryMainImage=document.getElementById('galleryMainImage');
+  const galleryThumbs=document.querySelectorAll('.gallery-thumb');
   const close=()=>{modal.classList.remove('open');modalImage.src='';};
-  document.querySelectorAll('.gallery button').forEach(btn=>{
+  galleryThumbs.forEach(btn=>{
     btn.addEventListener('click',()=>{
-      modalImage.src=btn.dataset.img;
-      modalImage.alt=btn.querySelector('img').alt;
-      modal.classList.add('open');
+      galleryMainImage.src=btn.dataset.img;
+      galleryMainImage.alt=btn.dataset.alt;
+      galleryThumbs.forEach(thumb=>thumb.setAttribute('aria-pressed',String(thumb===btn)));
     });
+  });
+  galleryMainButton.addEventListener('click',()=>{
+    modalImage.src=galleryMainImage.src;
+    modalImage.alt=galleryMainImage.alt;
+    modal.classList.add('open');
   });
   document.getElementById('modalClose').addEventListener('click',close);
   modal.addEventListener('click',e=>{if(e.target===modal)close()});

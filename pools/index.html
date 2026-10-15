@@ -1,0 +1,891 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="MT Højgaard Maldives — modular and hybrid precast pool solutions for resort developments in the Maldives.">
+<title>MT Højgaard Maldives | Modular & Hybrid Pool Solutions</title>
+<link rel="icon" type="image/png" href="https://www.mth-mv.com/images/favicon.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --navy:#003366; --navy-dark:#001E44; --navy-mid:#0047A0;
+  --gold:#B8923A; --gold-light:#D4B07A;
+  --white:#fff; --off:#F4F4F4; --ink:#1C1C1E; --muted:#5A6475;
+  --line:#DDE3EC; --footer:#1A1A1A;
+  --shadow:0 6px 24px rgba(0,51,102,.10);
+  --shadow2:0 12px 40px rgba(0,51,102,.12);
+  --container:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+img{display:block;width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+.container{width:min(var(--container),calc(100% - 40px));margin:auto}
+.section{padding:80px 0}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0 0 18px}
+h1{font-size:clamp(2.6rem,5.7vw,4.5rem)}
+h2{font-size:clamp(1.9rem,3.5vw,2.65rem)}
+h3{font-size:clamp(1.15rem,2vw,1.4rem)}
+p{margin:0 0 18px}
+.lead{font-size:1.08rem;color:var(--muted);max-width:720px}
+.muted{color:var(--muted)}
+.small{font-size:.86rem;color:var(--muted)}
+.rule{height:1px;background:var(--line)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:4px;padding:13px 18px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:.3s ease}
+.btn-primary{background:var(--gold);color:var(--navy-dark)}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-dark{background:var(--navy-dark);color:#fff}
+.btn-dark:hover{background:var(--navy)}
+.btn-link{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+.btn-link span{display:inline-block;transition:.3s}
+.btn-link:hover span{transform:translateX(5px)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* Header */
+.header{position:fixed;inset:0 0 auto 0;height:68px;z-index:50;color:#fff;transition:.3s;background:transparent}
+.header.scrolled{background:rgba(0,30,68,.94);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:-.03em}
+.nav-logo{
+  display:block;
+  width:auto;
+  height:40px;
+  max-width:210px;
+  object-fit:contain;
+}
+.footer-logo{
+  display:block;
+  width:auto;
+  height:42px;
+  max-width:220px;
+  object-fit:contain;
+}
+
+.brand-mark{width:32px;height:32px;border:1px solid rgba(255,255,255,.7);display:grid;place-items:center;position:relative}
+.brand-mark:before,.brand-mark:after{content:"";position:absolute;background:var(--gold)}
+.brand-mark:before{width:3px;height:20px;left:8px;transform:skew(-25deg)}
+.brand-mark:after{width:14px;height:3px;right:4px;bottom:7px}
+.brand-text{font-size:15px;line-height:1.05}
+.brand-text small{display:block;font-size:8px;letter-spacing:.16em;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:25px}
+.nav-links a{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.86);position:relative}
+.nav-links a:not(.nav-cta):after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:var(--gold);transition:.3s}
+.nav-links a:hover:after{width:100%}
+.nav-cta{padding:10px 14px;background:var(--gold);color:var(--navy-dark)!important;border-radius:4px}
+.menu-btn{display:none;background:none;border:0;color:#fff;width:44px;height:44px;cursor:pointer}
+.menu-icon,.menu-icon:before,.menu-icon:after{display:block;width:22px;height:2px;background:#fff;content:"";position:relative;margin:auto}
+.menu-icon:before{position:absolute;top:-7px}.menu-icon:after{position:absolute;top:7px}
+.mobile-menu{display:none;background:rgba(0,30,68,.98);border-top:1px solid rgba(255,255,255,.1)}
+.mobile-menu a{display:block;padding:15px 20px;border-bottom:1px solid rgba(255,255,255,.09);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#fff}
+
+/* Hero */
+.hero{min-height:780px;display:flex;align-items:flex-end;position:relative;overflow:hidden;color:#fff;background:var(--navy-dark)}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.01)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,30,68,.95) 0%,rgba(0,51,102,.72) 43%,rgba(0,30,68,.30) 100%),linear-gradient(0deg,rgba(0,30,68,.92) 0%,transparent 60%)}
+.hero-grid{position:absolute;inset:0;opacity:.12;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(90deg,#000,transparent 70%)}
+.hero-content{position:relative;padding:150px 0 80px;max-width:790px}
+.hero h1{max-width:760px}
+.hero h1 em{font-style:normal;color:var(--gold-light)}
+.hero-copy{font-size:1.08rem;color:rgba(255,255,255,.84);max-width:680px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:34px}
+.meta-chip{border:1px solid rgba(255,255,255,.25);background:rgba(0,30,68,.3);padding:8px 11px;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.hero-accent{position:absolute;right:8%;bottom:0;width:3px;height:220px;background:var(--gold);opacity:.75}
+
+/* Intro */
+.intro{background:#fff}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end}
+.statement{border-left:3px solid var(--gold);padding-left:24px;font-size:1.25rem;line-height:1.45;color:var(--navy-dark);font-weight:600}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.metric{padding:24px 18px 24px 0;border-right:1px solid var(--line)}
+.metric:last-child{border-right:0;padding-left:18px}
+.metric + .metric{padding-left:18px}
+.metric strong{display:block;color:var(--navy);font-size:2rem;line-height:1;font-weight:800}
+.metric span{display:block;margin-top:8px;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+/* Dark band */
+.dark{background:var(--navy-dark);color:#fff}
+.dark .lead,.dark .muted{color:rgba(255,255,255,.68)}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+.section-head > div:last-child{max-width:600px}
+
+/* Process */
+.process{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.step{padding:28px 22px 30px 0;border-right:1px solid var(--line);position:relative}
+.step:not(:first-child){padding-left:22px}
+.step:last-child{border-right:0}
+.step-no{font-size:11px;font-weight:900;letter-spacing:.15em;color:var(--gold);text-transform:uppercase}
+.step h3{margin-top:10px;color:var(--navy-dark)}
+.step p{font-size:13px;color:var(--muted);margin:0}
+
+
+/* Pool system architecture */
+.architecture{background:var(--navy-dark);color:#fff}
+.architecture-intro{display:grid;grid-template-columns:1fr .9fr;gap:70px;align-items:end;margin-bottom:46px}
+.architecture-intro .lead{color:rgba(255,255,255,.68)}
+.architecture-kicker{display:inline-flex;align-items:center;gap:9px;color:var(--gold-light);font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.architecture-kicker:before{content:"";width:28px;height:2px;background:var(--gold)}
+
+.system-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.system-card{background:#fff;color:var(--ink);border:1px solid rgba(255,255,255,.12);border-radius:4px;overflow:hidden;position:relative;transition:.3s ease}
+.system-card:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:.3s ease;z-index:2}
+.system-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,51,102,.22)}
+.system-card:hover:before{transform:scaleX(1)}
+.system-top{display:grid;grid-template-columns:92px 1fr;min-height:150px}
+.system-number{background:var(--navy);padding:22px;display:flex;align-items:flex-start;justify-content:center;font-size:3.1rem;line-height:1;font-weight:900;color:rgba(255,255,255,.2)}
+.system-card:hover .system-number{color:var(--gold)}
+.system-heading{padding:24px 24px 20px}
+.system-label{font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.system-heading h3{color:var(--navy-dark);margin:0;font-size:1.35rem}
+.system-body{padding:0 24px 24px}
+.system-body p{font-size:13px;color:var(--muted);margin-bottom:18px}
+.system-definition{font-size:14px!important;line-height:1.5;color:var(--navy-dark)!important;font-weight:600}
+.system-diagram{height:145px;background:#f4f7fa;border:1px solid var(--line);margin:0 24px 22px;padding:18px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.diagram{width:100%;max-width:330px}
+.diagram-label{font-size:8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;fill:var(--muted)}
+.diagram-navy{fill:var(--navy)}
+.diagram-blue{fill:var(--navy-mid)}
+.diagram-gold{fill:var(--gold)}
+.diagram-white{fill:#fff}
+.diagram-line{stroke:var(--navy);stroke-width:2;fill:none}
+.diagram-dash{stroke:var(--gold);stroke-width:2;stroke-dasharray:5 4;fill:none}
+.system-sequence{border-top:1px solid var(--line);padding-top:15px}
+.sequence-label{font-size:9px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.sequence{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.sequence span{font-size:9px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--navy-dark);background:#f4f7fa;border:1px solid var(--line);padding:6px 7px}
+.sequence i{font-style:normal;color:var(--gold);font-size:12px;font-weight:900}
+.application{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.application span{font-size:9px;font-weight:700;color:var(--navy);border:1px solid var(--line);padding:5px 7px;background:#fff}
+
+.architecture-note{margin-top:24px;padding:18px 20px;border-left:3px solid var(--gold);background:rgba(255,255,255,.045);color:rgba(255,255,255,.68);font-size:12px}
+.architecture-note strong{color:#fff}
+
+.selection{margin-top:55px;padding-top:42px;border-top:1px solid rgba(255,255,255,.13)}
+.selection-head{display:grid;grid-template-columns:.75fr 1.25fr;gap:55px;align-items:start;margin-bottom:30px}
+.selection-head .lead{color:rgba(255,255,255,.64);font-size:.96rem}
+.selection-flow{display:grid;grid-template-columns:repeat(4,1fr);align-items:stretch}
+.selection-step{position:relative;padding:18px 18px 20px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.035)}
+.selection-step:not(:last-child){border-right:0}
+.selection-step-no{font-size:9px;color:var(--gold);font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.selection-step strong{display:block;margin:7px 0 5px;font-size:14px}
+.selection-step span{display:block;font-size:11px;line-height:1.5;color:rgba(255,255,255,.56)}
+.selection-arrow{position:absolute;right:-7px;top:50%;transform:translateY(-50%);width:13px;height:13px;background:var(--navy-dark);border-top:1px solid var(--gold);border-right:1px solid var(--gold);rotate:45deg;z-index:2}
+
+.project-link{display:inline-flex;margin-top:20px;color:var(--navy);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.project-link span{margin-left:6px;transition:.3s}
+.project-link:hover span{transform:translateX(4px)}
+
+@media (max-width:960px){
+  .architecture-intro,.selection-head{grid-template-columns:1fr;gap:28px}
+  .system-grid{grid-template-columns:1fr}
+  .selection-flow{grid-template-columns:repeat(2,1fr)}
+  .selection-step:nth-child(2){border-right:1px solid rgba(255,255,255,.14)}
+  .selection-step:nth-child(n+3){border-top:0}
+}
+@media (max-width:640px){
+  .architecture-intro{gap:22px}
+  .system-top{grid-template-columns:72px 1fr}
+  .system-number{padding:18px;font-size:2.6rem}
+  .system-heading{padding:20px 18px 16px}
+  .system-body{padding:0 18px 20px}
+  .system-diagram{margin-left:18px;margin-right:18px}
+  .selection-flow{grid-template-columns:1fr}
+  .selection-step,.selection-step:nth-child(2){border-right:1px solid rgba(255,255,255,.14)}
+  .selection-step + .selection-step{border-top:0}
+  .selection-arrow{right:auto;top:auto;bottom:-7px;left:50%;transform:translateX(-50%) rotate(135deg)}
+}
+
+/* Projects */
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.project{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;position:relative;transition:.3s;box-shadow:none}
+.project:before{content:"";height:3px;position:absolute;left:0;right:0;top:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:.3s;z-index:2}
+.project:hover{transform:translateY(-4px);box-shadow:var(--shadow2)}
+.project:hover:before{transform:scaleX(1)}
+.project-image{aspect-ratio:16/9;overflow:hidden;background:#dfe8f0}
+.project-image a{display:block;width:100%;height:100%}
+.project-image img{height:100%;object-fit:cover;transition:.5s}
+.project:hover .project-image img{transform:scale(1.03)}
+.project-body{padding:24px}
+.project-top{display:flex;justify-content:space-between;gap:15px;align-items:start}
+.project-label{font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--gold)}
+.project-year{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--muted)}
+.project h3{color:var(--navy-dark);margin:8px 0 10px}
+.project p{font-size:13px;color:var(--muted)}
+.project-specs{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}
+.spec{border:1px solid var(--line);padding:6px 8px;font-size:10px;font-weight:700;color:var(--navy);background:#fafbfd}
+
+/* Featured */
+.featured{display:grid;grid-template-columns:1.15fr .85fr;background:var(--navy-dark);color:#fff}
+.featured-img{min-height:510px;position:relative}
+.featured-img img{height:100%;object-fit:cover}
+.featured-img:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 65%,rgba(0,30,68,.45))}
+.featured-copy{padding:54px 52px;display:flex;flex-direction:column;justify-content:center}
+.featured-copy p{color:rgba(255,255,255,.72)}
+.detail-list{margin:20px 0 28px;border-top:1px solid rgba(255,255,255,.14)}
+.detail-row{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:12px}
+.detail-row span:first-child{color:rgba(255,255,255,.55)}
+.detail-row span:last-child{text-align:right;font-weight:700}
+
+
+/* Technical reference image placeholder */
+.featured-img img[src*="mfar-kudavillingili-pools-placeholder"]{
+  background:
+    linear-gradient(135deg,rgba(0,30,68,.92),rgba(0,71,160,.58)),
+    repeating-linear-gradient(135deg,transparent 0 18px,rgba(255,255,255,.06) 18px 19px);
+  min-height:100%;
+  object-fit:cover;
+}
+
+/* Site evidence gallery: large selected photo with an expandable thumbnail collection */
+.site-evidence-gallery{display:grid;grid-template-columns:1fr;gap:14px}
+.gallery-main{position:relative;width:100%;height:clamp(280px,58vw,620px);padding:0;border:0;overflow:hidden;cursor:zoom-in;background:#dfe8f0}
+.gallery-main img{width:100%;height:100%;object-fit:contain;background:#071b32;transition:opacity .2s ease}
+.gallery-main:after{content:"ENLARGE PHOTO";position:absolute;right:14px;bottom:14px;background:rgba(0,30,68,.88);color:#fff;padding:8px 11px;font-size:10px;font-weight:800;letter-spacing:.12em}
+.gallery-thumbnails{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.gallery-thumb{height:clamp(75px,12vw,140px);padding:0;border:2px solid transparent;cursor:pointer;overflow:hidden;background:#dfe8f0;position:relative}
+.gallery-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.gallery-thumb:hover img{transform:scale(1.05)}
+.gallery-thumb[aria-pressed="true"]{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.gallery-thumb:focus-visible,.gallery-main:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(max-width:640px){.gallery-thumbnails{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.gallery-thumb{height:90px}}
+
+/* CTA */
+.cta{background:var(--off)}
+.cta-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}
+.cta-panel{background:var(--navy-dark);color:#fff;padding:38px;border-top:4px solid var(--gold)}
+.cta-panel p{color:rgba(255,255,255,.72)}
+.contact-line{display:flex;gap:12px;align-items:center;margin:20px 0 24px;color:#fff}
+.contact-line strong{font-size:14px}
+.contact-line small{display:block;color:rgba(255,255,255,.55);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+
+/* Footer */
+footer{background:var(--footer);color:#fff;padding:55px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .8fr;gap:50px}
+footer .brand{margin-bottom:18px}
+footer p{color:rgba(255,255,255,.58);font-size:13px;max-width:470px}
+.footer-title{font-size:10px;font-weight:800;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+.footer-links a{display:block;color:rgba(255,255,255,.76);font-size:13px;margin:8px 0}
+.footer-bottom{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:10px;color:rgba(255,255,255,.42);display:flex;justify-content:space-between;gap:20px}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,20,45,.88);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-inner{max-width:1100px;width:100%;position:relative}
+.modal-inner img{max-height:82vh;object-fit:contain;background:#fff}
+.modal-close{position:absolute;right:0;top:-48px;background:none;border:0;color:#fff;font-size:30px;cursor:pointer}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .section{padding:65px 0}
+  .intro-grid,.cta-grid,.featured{grid-template-columns:1fr}
+  .intro-grid{gap:40px}
+  .capability{grid-template-columns:220px 1fr}
+  .process{grid-template-columns:repeat(2,1fr)}
+  .step:nth-child(2){border-right:0}
+  .step:nth-child(n+3){border-top:1px solid var(--line)}
+  .project-grid{grid-template-columns:1fr}
+  .featured-img{min-height:360px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-grid > :first-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .nav-logo{height:36px;max-width:190px}
+  .footer-logo{height:38px}
+
+  .container{width:min(var(--container),calc(100% - 32px))}
+  .nav-links{display:none}
+  .menu-btn{display:block}
+  .mobile-menu.open{display:block}
+  .hero{min-height:720px}
+  .hero-content{padding:125px 0 60px}
+  .hero h1{font-size:clamp(2.35rem,11vw,3.5rem)}
+  .hero-accent{height:120px;right:5%}
+  .metrics{grid-template-columns:1fr}
+  .metric,.metric + .metric,.metric:last-child{border-right:0;border-bottom:1px solid var(--line);padding:18px 0}
+  .metric:last-child{border-bottom:0}
+  .section-head{display:block;margin-bottom:30px}
+  .capability{grid-template-columns:1fr}
+  .cap-side{min-height:220px}
+  .cap-icon{margin-top:25px}
+  .cap-body{padding:28px 22px}
+  .feature{grid-template-columns:30px 1fr}
+  .feature span{grid-column:2}
+  .process{grid-template-columns:1fr}
+  .step,.step:not(:first-child){border-right:0;padding:22px 0}
+  .step + .step{border-top:1px solid var(--line)}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  .gallery button:first-child{grid-column:1/-1;grid-row:auto}
+  .cta-grid{gap:30px}
+  .cta-panel{padding:28px 22px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-grid > :first-child{grid-column:auto}
+  .footer-bottom{display:block}
+  .footer-bottom span{display:block;margin-top:8px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="siteHeader">
+  <div class="container nav">
+    <a href="https://www.mth-mv.com" class="brand" aria-label="MT Højgaard Maldives home">
+      <img class="nav-logo" src="https://www.mth-mv.com/images/MTH-Logo_white.webp" alt="MT Højgaard Maldives">
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#solutions">Solutions</a>
+      <a href="#process">Process</a>
+      <a href="#projects">Projects</a>
+      <a href="#technical">Technical</a>
+      <a href="#contact" class="nav-cta">Discuss a project</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span class="menu-icon"></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#solutions">Solutions</a>
+    <a href="#process">Process</a>
+    <a href="#projects">Projects</a>
+    <a href="#technical">Technical</a>
+    <a href="#contact">Discuss a project</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('https://mth-mv.com/pools/images/Hero-pool.webp');"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-accent"></div>
+  <div class="container hero-content reveal">
+    <p class="eyebrow">Modular &amp; Hybrid Pool Solutions</p>
+    <h1>Precast pool systems for <em>Maldives resort</em> construction.</h1>
+    <p class="hero-copy">MT Højgaard Maldives delivers pool construction approaches built around prefabrication, site assembly and hybrid concrete methods for water-villa and beach-villa resort developments.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#projects">View project record</a>
+      <a class="btn btn-link" style="color:#fff" href="#technical">How the systems work <span>→</span></a>
+    </div>
+    <div class="hero-meta" aria-label="Service categories">
+      <span class="meta-chip">Precast</span>
+      <span class="meta-chip">Hybrid concrete</span>
+      <span class="meta-chip">Marine logistics</span>
+      <span class="meta-chip">On-site assembly</span>
+    </div>
+  </div>
+</section>
+
+<section class="section intro">
+  <div class="container intro-grid reveal">
+    <div>
+      <p class="eyebrow">Maldives operations</p>
+      <h2>Pool construction adapted to remote resort conditions.</h2>
+      <p class="lead">The supplied project material describes MT Højgaard's Maldives operations across marine works, coastal protection, harbors and resort construction, with a specialist pool focus on high-precision precast and hybrid swimming pools.</p>
+    </div>
+    <div>
+      <p class="statement">The delivery model combines design, prefabrication, logistics and on-site assembly or casting — allowing the construction method to be selected around the geometry and access conditions of each resort project.</p>
+    </div>
+  </div>
+  <div class="container" style="margin-top:52px">
+    <div class="metrics reveal">
+      <div class="metric"><strong>94</strong><span>Veligandhu water villa pools</span></div>
+      <div class="metric"><strong>63</strong><span>Innahura pools — 30 water + 33 beach</span></div>
+      <div class="metric"><strong>50</strong><span>Kagi pools — 40 water + 10 beach</span></div>
+    </div>
+    <p class="small" style="margin-top:12px">Selected project quantities from the supplied MT Højgaard pool presentation; figures are project-specific, not a company-wide total.</p>
+  </div>
+</section>
+
+<section class="section architecture" id="solutions">
+  <div class="container">
+    <div class="architecture-intro reveal">
+      <div>
+        <p class="eyebrow">01 / Pool system architecture</p>
+        <h2>Four construction systems. Selected around the project.</h2>
+      </div>
+      <div>
+        <p class="architecture-kicker">Engineering approach</p>
+        <p class="lead">Pool geometry, villa type, access, lifting requirements and construction sequence influence the appropriate construction method. The systems below describe the principal approaches for Maldives resort pool delivery.</p>
+      </div>
+    </div>
+
+    <div class="system-grid">
+
+      <!-- SYSTEM 01 -->
+      <article class="system-card reveal">
+        <div class="system-top">
+          <div class="system-number">01</div>
+          <div class="system-heading">
+            <div class="system-label">MTH Standard Precast Pool</div>
+            <h3>Single-unit precast pool</h3>
+          </div>
+        </div>
+
+        <div class="system-diagram" aria-label="Diagram showing a complete precast pool positioned on structural support">
+          <svg class="diagram" viewBox="0 0 360 120" role="img" aria-hidden="true">
+            <rect x="62" y="27" width="236" height="48" rx="2" class="diagram-navy"/>
+            <rect x="75" y="38" width="210" height="26" rx="1" class="diagram-white"/>
+            <path d="M75 52 H285" class="diagram-dash"/>
+            <rect x="78" y="76" width="42" height="15" class="diagram-blue"/>
+            <rect x="240" y="76" width="42" height="15" class="diagram-blue"/>
+            <text x="180" y="20" text-anchor="middle" class="diagram-label">COMPLETE PRECAST UNIT</text>
+            <text x="99" y="105" text-anchor="middle" class="diagram-label">SUPPORT</text>
+            <text x="261" y="105" text-anchor="middle" class="diagram-label">SUPPORT</text>
+          </svg>
+        </div>
+
+        <div class="system-body">
+          <p class="system-definition">A complete pool unit manufactured off site and installed as a single precast element.</p>
+          <p>For water villas, the unit can be positioned on prepared precast structural beams. For beach villas, the unit can be positioned on the prepared structural or ground support defined for the project.</p>
+          <div class="system-sequence">
+            <div class="sequence-label">Typical sequence</div>
+            <div class="sequence">
+              <span>Precast</span><i>→</i><span>Transport</span><i>→</i><span>Lift</span><i>→</i><span>Position</span><i>→</i><span>Finish</span>
+            </div>
+          </div>
+          <div class="application">
+            <span>Water villas</span><span>Beach villas</span><span>Repetitive layouts</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- SYSTEM 02 -->
+      <article class="system-card reveal">
+        <div class="system-top">
+          <div class="system-number">02</div>
+          <div class="system-heading">
+            <div class="system-label">MTH Modular Precast Pool</div>
+            <h3>Multi-piece precast pool</h3>
+          </div>
+        </div>
+
+        <div class="system-diagram" aria-label="Diagram showing three modular precast pool sections assembled together">
+          <svg class="diagram" viewBox="0 0 360 120" role="img" aria-hidden="true">
+            <rect x="22" y="38" width="80" height="43" class="diagram-blue"/>
+            <rect x="110" y="30" width="140" height="59" class="diagram-navy"/>
+            <rect x="258" y="38" width="80" height="43" class="diagram-blue"/>
+            <rect x="35" y="49" width="54" height="21" class="diagram-white"/>
+            <rect x="126" y="43" width="108" height="33" class="diagram-white"/>
+            <rect x="271" y="49" width="54" height="21" class="diagram-white"/>
+            <text x="62" y="102" text-anchor="middle" class="diagram-label">END</text>
+            <text x="180" y="102" text-anchor="middle" class="diagram-label">CENTER</text>
+            <text x="298" y="102" text-anchor="middle" class="diagram-label">END</text>
+            <path d="M102 59 H110 M250 59 H258" class="diagram-dash"/>
+          </svg>
+        </div>
+
+        <div class="system-body">
+          <p class="system-definition">Pool sections manufactured away from the final villa position, transported separately and assembled on site.</p>
+          <p>This approach is documented in the supplied project record through the two-piece Veligandhu pools and the three-piece MFAR Kudavillingili pool configuration.</p>
+          <div class="system-sequence">
+            <div class="sequence-label">Typical sequence</div>
+            <div class="sequence">
+              <span>Design</span><i>→</i><span>Precast sections</span><i>→</i><span>Transport</span><i>→</i><span>Lift</span><i>→</i><span>Assemble</span>
+            </div>
+          </div>
+          <div class="application">
+            <span>Water villas</span><span>Sectional lifting</span><span>Remote access</span>
+          </div>
+          <a class="project-link" href="#projects">Veligandhu + MFAR evidence <span>→</span></a>
+        </div>
+      </article>
+
+      <!-- SYSTEM 03 -->
+      <article class="system-card reveal">
+        <div class="system-top">
+          <div class="system-number">03</div>
+          <div class="system-heading">
+            <div class="system-label">MTH Hybrid Precast Pool</div>
+            <h3>Precast base + cast-in-situ walls</h3>
+          </div>
+        </div>
+
+        <div class="system-diagram" aria-label="Diagram showing a precast pool base positioned on beams with cast-in-situ walls extended above it using a water bar">
+          <svg class="diagram" viewBox="0 0 360 120" role="img" aria-hidden="true">
+            <!-- Cast-in-situ walls -->
+            <rect x="62" y="20" width="18" height="49" class="diagram-navy"/>
+            <rect x="280" y="20" width="18" height="49" class="diagram-navy"/>
+
+            <!-- Water bar / joint -->
+            <rect x="80" y="62" width="200" height="5" class="diagram-gold"/>
+
+            <!-- Precast base -->
+            <rect x="80" y="67" width="200" height="19" class="diagram-blue"/>
+
+            <!-- Supporting beams -->
+            <rect x="91" y="89" width="55" height="12" class="diagram-navy"/>
+            <rect x="214" y="89" width="55" height="12" class="diagram-navy"/>
+
+            <text x="180" y="14" text-anchor="middle" class="diagram-label">CAST-IN-SITU WALLS</text>
+            <text x="180" y="60" text-anchor="middle" class="diagram-label" style="fill:#B8923A">WATER BAR / JOINT</text>
+            <text x="180" y="80" text-anchor="middle" class="diagram-label" style="fill:#fff">PRECAST BASE</text>
+            <text x="118" y="113" text-anchor="middle" class="diagram-label">BEAM</text>
+            <text x="242" y="113" text-anchor="middle" class="diagram-label">BEAM</text>
+          </svg>
+        </div>
+
+        <div class="system-body">
+          <p class="system-definition">A precast pool base is delivered to site, positioned on the structural beams, and the pool walls are extended upward using cast-in-situ concrete with a water bar at the connection.</p>
+          <p>The precast base provides the factory-produced starting element. Once positioned, reinforcement and the wall connection are completed on site, with the water bar integrated at the joint before the cast-in-situ walls are formed.</p>
+          <div class="system-sequence">
+            <div class="sequence-label">Typical sequence</div>
+            <div class="sequence">
+              <span>Precast base</span><i>→</i><span>Deliver</span><i>→</i><span>Position on beams</span><i>→</i><span>Water bar</span><i>→</i><span>Cast walls</span>
+            </div>
+          </div>
+          <div class="application">
+            <span>Precast base</span><span>Beam-supported</span><span>Cast-in-situ walls</span><span>Water bar</span>
+          </div>
+          <a class="project-link" href="#projects">Innahura + Kagi evidence <span>→</span></a>
+        </div>
+      </article>
+
+      <!-- SYSTEM 04 -->
+      <article class="system-card reveal">
+        <div class="system-top">
+          <div class="system-number">04</div>
+          <div class="system-heading">
+            <div class="system-label">MTH Large-Format / Site-Built Pool</div>
+            <h3>Filigree-assisted cast-in-situ construction</h3>
+          </div>
+        </div>
+
+        <div class="system-diagram" aria-label="Diagram showing a precast filigree element incorporated into a site-built cast-in-situ pool">
+          <svg class="diagram" viewBox="0 0 360 120" role="img" aria-hidden="true">
+            <rect x="62" y="20" width="18" height="66" class="diagram-navy"/>
+            <rect x="280" y="20" width="18" height="66" class="diagram-navy"/>
+            <rect x="80" y="67" width="200" height="19" class="diagram-navy"/>
+            <rect x="80" y="88" width="200" height="12" class="diagram-gold"/>
+            <path d="M91 77 H269" class="diagram-dash"/>
+            <text x="180" y="14" text-anchor="middle" class="diagram-label">CAST-IN-SITU WALLS</text>
+            <text x="180" y="81" text-anchor="middle" class="diagram-label" style="fill:#fff">CAST-IN-SITU BASE</text>
+            <text x="180" y="114" text-anchor="middle" class="diagram-label">PRECAST FILIGREE / BASE ELEMENT</text>
+          </svg>
+        </div>
+
+        <div class="system-body">
+          <p class="system-definition">For larger or project-specific pool geometries, precast filigree elements can be incorporated into a predominantly cast-in-situ construction sequence.</p>
+          <p>The filigree element forms part of the base construction while the structural base and walls are completed on site. Final system selection remains subject to project engineering, access and construction requirements.</p>
+          <div class="system-sequence">
+            <div class="sequence-label">Typical sequence</div>
+            <div class="sequence">
+              <span>Filigree</span><i>→</i><span>Position</span><i>→</i><span>Reinforce</span><i>→</i><span>Cast base</span><i>→</i><span>Cast walls</span>
+            </div>
+          </div>
+          <div class="application">
+            <span>Large geometry</span><span>Site-built</span><span>Project-specific</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="architecture-note reveal">
+      <strong>System selection:</strong> the four approaches are not fixed product packages. The appropriate construction method should be established against the pool dimensions, villa type, structural interface, access, lifting/logistics and construction programme for each project.
+    </div>
+
+    <div class="selection reveal">
+      <div class="selection-head">
+        <div>
+          <p class="eyebrow">System selection logic</p>
+          <h3 style="color:#fff">From pool geometry to construction method.</h3>
+        </div>
+        <div>
+          <p class="lead">A simple engineering decision sequence helps explain why different pool configurations are used across resort developments.</p>
+        </div>
+      </div>
+      <div class="selection-flow">
+        <div class="selection-step">
+          <div class="selection-step-no">01 / Assess</div>
+          <strong>Pool &amp; villa conditions</strong>
+          <span>Geometry, villa type, structural support and access.</span>
+          <i class="selection-arrow" aria-hidden="true"></i>
+        </div>
+        <div class="selection-step">
+          <div class="selection-step-no">02 / Determine</div>
+          <strong>Prefabrication level</strong>
+          <span>Complete unit, sectional unit or selected precast elements.</span>
+          <i class="selection-arrow" aria-hidden="true"></i>
+        </div>
+        <div class="selection-step">
+          <div class="selection-step-no">03 / Plan</div>
+          <strong>Installation sequence</strong>
+          <span>Transport, lifting, assembly, reinforcement and site casting.</span>
+          <i class="selection-arrow" aria-hidden="true"></i>
+        </div>
+        <div class="selection-step">
+          <div class="selection-step-no">04 / Deliver</div>
+          <strong>Completed pool structure</strong>
+          <span>Construction method aligned with the project requirements.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">02 / Delivery process</p>
+        <h2>From pool geometry to installation.</h2>
+      </div>
+      <div><p class="lead">A project-specific workflow based on the scope and construction methods described in the supplied material.</p></div>
+    </div>
+    <div class="process reveal">
+      <article class="step">
+        <div class="step-no">Step 01</div>
+        <h3>Design</h3>
+        <p>Establish the pool geometry and construction approach around the resort development and structural interface.</p>
+      </article>
+      <article class="step">
+        <div class="step-no">Step 02</div>
+        <h3>Prefabrication</h3>
+        <p>Produce precast sections or filigree/base elements off site where the selected system calls for them.</p>
+      </article>
+      <article class="step">
+        <div class="step-no">Step 03</div>
+        <h3>Logistics</h3>
+        <p>Plan movement, lifting and access for remote, overwater or beach-villa installation conditions.</p>
+      </article>
+      <article class="step">
+        <div class="step-no">Step 04</div>
+        <h3>Assembly / casting</h3>
+        <p>Lift, position and assemble modular units, or combine precast elements with cast-in-situ concrete on site.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="technical">
+  <div class="container">
+    <div class="featured reveal">
+      <div class="featured-img">
+        <a href="https://mth-mv.com/pools/images/MFAR-Technical-Reference.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size MFAR Kudavillingili technical reference photo">
+          <img src="https://mth-mv.com/pools/images/MFAR-Technical-Reference.webp" alt="MFAR Kudavillingili technical reference pool installation">
+        </a>
+      </div>
+      <div class="featured-copy">
+        <p class="eyebrow">03 / Technical reference</p>
+        <h2>MFAR Kudavillingili: three-piece precast installation.</h2>
+        <p>The 2024 MFAR Kudavillingili Pools project is documented as 16 water villa pools, each sized 10.0 × 4.0 × 1.40 m high. Each pool was solved as a three-piece modular unit — two identical end sections and a center section — which were precast and assembled on site.</p>
+        <div class="detail-list">
+          <div class="detail-row"><span>Owner</span><span>MFAR Kudavillingili Pvt Ltd.</span></div>
+          <div class="detail-row"><span>Quantity</span><span>16 water villa pools</span></div>
+          <div class="detail-row"><span>Pool size</span><span>10.0 × 4.0 × 1.40 m ht.</span></div>
+          <div class="detail-row"><span>Configuration</span><span>3 precast pieces / pool</span></div>
+          <div class="detail-row"><span>Assembly</span><span>Precast &amp; assembled on site</span></div>
+        </div>
+        <a class="btn btn-primary" href="#projects">See the project record</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">04 / Selected project record</p>
+        <h2>Pool projects documented in the supplied material.</h2>
+      </div>
+      <div><p class="lead">The following cards retain the project names, quantities, dimensions and construction methods stated in the supplied presentation.</p></div>
+    </div>
+
+    <div class="project-grid">
+      <article class="project reveal">
+        <div class="project-image"><a href="https://mth-mv.com/pools/images/Project_pools-Veligandhu.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size photo: Aerial view of Veligandhu water villa development"><img src="https://mth-mv.com/pools/images/Project_pools-Veligandhu.webp" alt="Aerial view of Veligandhu water villa development"></a></div>
+        <div class="project-body">
+          <div class="project-top"><span class="project-label">Water villas</span><span class="project-year">2024</span></div>
+          <h3>Veligandhu Water Villa Pools</h3>
+          <p>94 water villa pools for Crown &amp; Champa Resorts. Two-piece precast pools were assembled on site.</p>
+          <div class="project-specs"><span class="spec">94 pools</span><span class="spec">6.79 × 3.88 × 1.45 m</span><span class="spec">2-piece precast</span></div>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-image"><a href="https://mth-mv.com/pools/images/Project_pools-Inahuraa.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size photo: Aerial view of Innahura resort development"><img src="https://mth-mv.com/pools/images/Project_pools-Inahuraa.webp" alt="Aerial view of Innahura resort development"></a></div>
+        <div class="project-body">
+          <div class="project-top"><span class="project-label">Water + beach villas</span><span class="project-year">2024</span></div>
+          <h3>Innahura Resort Pools</h3>
+          <p>30 water villa pools and 33 beach villa pools for ChampaLars Holdings. Hybrid construction combined precast filigree slabs with cast-in-situ concrete.</p>
+          <div class="project-specs"><span class="spec">63 pools</span><span class="spec">6.8 × 3.6 × 1.21 m</span><span class="spec">Hybrid</span></div>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-image"><a href="https://mth-mv.com/pools/images/Project_pools-MFAR-Kudavillingil.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size photo: MFAR Kudavillingili precast pool installation"><img src="https://mth-mv.com/pools/images/Project_pools-MFAR-Kudavillingil.webp" alt="MFAR Kudavillingili precast pool installation"></a></div>
+        <div class="project-body">
+          <div class="project-top"><span class="project-label">Water villas</span><span class="project-year">2024</span></div>
+          <h3>MFAR Kudavillingili Pools</h3>
+          <p>16 water villa pools for MFAR Kudavillingili Pvt Ltd. The pool was solved as a three-piece modular unit with two identical ends and a center section.</p>
+          <div class="project-specs"><span class="spec">16 pools</span><span class="spec">10.0 × 4.0 × 1.40 m</span><span class="spec">3-piece modular</span></div>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-image"><a href="https://mth-mv.com/pools/images/Project_pools-Maabinhuraa.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size photo: Mabinhuraa water villa pools"><img src="https://mth-mv.com/pools/images/Project_pools-Maabinhuraa.webp" alt="Mabinhuraa water villa pools"></a></div>
+        <div class="project-body">
+          <div class="project-top"><span class="project-label">Water villas</span><span class="project-year">2021</span></div>
+          <h3>Mabinhuraa Pools</h3>
+          <p>60 water villa pools for Kuredu Holdings Pvt Ltd. Precast base slabs were installed on site, followed by cast-in-situ walls with integrated water bars.</p>
+          <div class="project-specs"><span class="spec">60 pools</span><span class="spec">4.5 × 2.80 × 1.305 m</span><span class="spec">Hybrid</span></div>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-image"><a href="https://mth-mv.com/pools/images/Project_pools-Kagi.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size photo: Aerial view of Kagi Resort pools"><img src="https://mth-mv.com/pools/images/Project_pools-Kagi.webp" alt="Aerial view of Kagi Resort pools"></a></div>
+        <div class="project-body">
+          <div class="project-top"><span class="project-label">Water + beach villas</span><span class="project-year">2019</span></div>
+          <h3>Kagi Resort Pools</h3>
+          <p>40 water villa pools and 10 beach villa pools for Kagi Development Pvt Ltd. The documented solution used precast base slabs, cast-in-situ walls and integrated water bars.</p>
+          <div class="project-specs"><span class="spec">50 pools</span><span class="spec">3.0 × 4.50 × 1.305 m</span><span class="spec">Hybrid</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--off)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><p class="eyebrow">05 / Site evidence</p><h2>Construction detail, not lifestyle imagery.</h2></div>
+      <div><p class="lead">The supplied presentation contains aerial resort context, precast pool sections, reinforcement, formwork, lifting and completed pool installations.</p></div>
+    </div>
+    <div class="site-evidence-gallery reveal" id="siteEvidenceGallery">
+      <button class="gallery-main" type="button" id="galleryMainButton" aria-label="Enlarge selected site evidence photo">
+        <img id="galleryMainImage" src="https://mth-mv.com/pools/images/SE_pools-Inahuraa.webp" alt="Innahura pool construction and reinforcement">
+      </button>
+      <div class="gallery-thumbnails" aria-label="Site evidence photo thumbnails">
+        <!-- Add future photos by duplicating a .gallery-thumb button and updating its image URL and alt text. -->
+        <button class="gallery-thumb" type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Inahuraa.webp" data-alt="Innahura pool construction and reinforcement" aria-label="Show Innahura pool construction photo" aria-pressed="true"><img src="https://mth-mv.com/pools/images/SE_pools-Inahuraa.webp" alt=""></button>
+        <button class="gallery-thumb" type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Kagi(2).webp" data-alt="Precast pool section at Kagi Resort" aria-label="Show Kagi precast pool photo" aria-pressed="false"><img src="https://mth-mv.com/pools/images/SE_pools-Kagi(2).webp" alt=""></button>
+        <button class="gallery-thumb" type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Mabinhuraa.webp" data-alt="Modular pool installation at Mabinhuraa" aria-label="Show Mabinhuraa modular pool photo" aria-pressed="false"><img src="https://mth-mv.com/pools/images/SE_pools-Mabinhuraa.webp" alt=""></button>
+        <button class="gallery-thumb" type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Veligandhu.webp" data-alt="Veligandhu pool structure under construction" aria-label="Show Veligandhu pool construction photo" aria-pressed="false"><img src="https://mth-mv.com/pools/images/SE_pools-Veligandhu.webp" alt=""></button>
+        <button class="gallery-thumb" type="button" data-img="https://mth-mv.com/pools/images/SE_pools-Dherifinolhu.webp" data-alt="Dherifinolhu pool formwork and reinforcement" aria-label="Show Dherifinolhu formwork photo" aria-pressed="false"><img src="https://mth-mv.com/pools/images/SE_pools-Dherifinolhu.webp" alt=""></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta" id="contact">
+  <div class="container cta-grid reveal">
+    <div>
+      <p class="eyebrow">06 / Project enquiry</p>
+      <h2>Discuss a pool package for your next Maldives resort project.</h2>
+      <p class="lead">Share the resort location, villa type, pool quantity, preliminary dimensions and preferred construction programme. The delivery approach can then be considered against the project conditions.</p>
+    </div>
+    <div class="cta-panel">
+      <p class="eyebrow">MT Højgaard Maldives</p>
+      <h3>Engineering-led pool construction</h3>
+      <p>Contact the Managing Director listed in the supplied pool presentation.</p>
+      <div class="contact-line">
+        <div>
+          <strong>Niels Brock Ulrich</strong>
+          <small>Managing Director</small>
+        </div>
+      </div>
+      <a class="btn btn-primary" href="mailto:nu@mth.dk?subject=Maldives%20Resort%20Pool%20Project">Email nu@mth.dk</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="https://www.mth-mv.com" class="brand" aria-label="MT Højgaard Maldives home">
+          <img class="footer-logo" src="https://www.mth-mv.com/images/MTH-Logo_white.webp" alt="MT Højgaard Maldives">
+        </a>
+        <p>Modular and hybrid pool solutions for Maldives resort developments, presented as a dedicated MT Højgaard Maldives service branch.</p>
+      </div>
+      <div>
+        <div class="footer-title">Explore</div>
+        <div class="footer-links">
+          <a href="#solutions">Solutions</a>
+          <a href="#process">Process</a>
+          <a href="#projects">Projects</a>
+          <a href="#technical">Technical reference</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Contact</div>
+        <div class="footer-links">
+          <a href="mailto:nu@mth.dk">nu@mth.dk</a>
+          <a href="#contact">Project enquiry →</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> MT Højgaard Maldives</span>
+      <span>mth-mv.com · Precast &amp; Hybrid Pool Construction</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Project image viewer">
+  <div class="modal-inner">
+    <button class="modal-close" id="modalClose" aria-label="Close image viewer">×</button>
+    <img id="modalImage" src="" alt="">
+  </div>
+</div>
+
+<script>
+(function(){
+  const header=document.getElementById('siteHeader');
+  const menuBtn=document.getElementById('menuBtn');
+  const mobileMenu=document.getElementById('mobileMenu');
+
+  function onScroll(){ header.classList.toggle('scrolled', window.scrollY>25); }
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  menuBtn.addEventListener('click',()=>{
+    const open=mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',String(open));
+  });
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    mobileMenu.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false');
+  }));
+
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+  const modal=document.getElementById('imageModal');
+  const modalImage=document.getElementById('modalImage');
+  const galleryMainButton=document.getElementById('galleryMainButton');
+  const galleryMainImage=document.getElementById('galleryMainImage');
+  const galleryThumbs=document.querySelectorAll('.gallery-thumb');
+  const close=()=>{modal.classList.remove('open');modalImage.src='';};
+  galleryThumbs.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      galleryMainImage.src=btn.dataset.img;
+      galleryMainImage.alt=btn.dataset.alt;
+      galleryThumbs.forEach(thumb=>thumb.setAttribute('aria-pressed',String(thumb===btn)));
+    });
+  });
+  galleryMainButton.addEventListener('click',()=>{
+    modalImage.src=galleryMainImage.src;
+    modalImage.alt=galleryMainImage.alt;
+    modal.classList.add('open');
+  });
+  document.getElementById('modalClose').addEventListener('click',close);
+  modal.addEventListener('click',e=>{if(e.target===modal)close()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

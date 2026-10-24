@@ -130,7 +130,7 @@ p { line-height: var(--line-height-body); color: var(--text-muted); }
 .nav-links > li { position: relative; }
 .nav-links .nav-dropdown {
   position: absolute; top: 100%; left: 0;
-  min-width: 230px; padding: 8px 0;
+  min-width: 280px; padding: 8px 0;
   list-style: none; display: none;
   background: rgba(0, 20, 50, 0.98);
   border-top: 2px solid var(--accent);
@@ -838,7 +838,7 @@ footer {
 <body>
 
 <!-- ═══ NAV ═══════════════════════════════════════════════ -->
-<nav id="navbar">
+<nav id="navbar" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="#home" class="nav-logo">
       <div class="nav-logo-mark">
@@ -850,12 +850,16 @@ footer {
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#precast">Precast</a></li>
-      <li><a href="#solutions">Solutions</a></li>
+      <li class="has-dropdown">
+        <a href="#solutions" aria-haspopup="true" aria-expanded="false">Services</a>
+        <ul class="nav-dropdown">
+          <li><a href="https://mth-mv.com/pools/">Swimming Pools</a></li>
+          <li><a href="https://mth-mv.com/concrete-repair-rehabilitation">Concrete Repair &amp; Rehabilitation</a></li>
+        </ul>
+      </li>
       <li><a href="#projects">Projects</a></li>
       <li class="has-dropdown">
-        <a href="https://www.mth-mv.com/workshop" aria-haspopup="true">Workshop</a>
+        <a href="https://www.mth-mv.com/workshop" aria-haspopup="true" aria-expanded="false">Workshop</a>
         <ul class="nav-dropdown">
           <li><a href="https://www.mth-mv.com/workshop#capabilities">Capabilities</a></li>
           <li><a href="https://www.mth-mv.com/workshop#for-sale">Equipment For Sale</a></li>
@@ -870,15 +874,19 @@ footer {
   </div>
 </nav>
 
-<nav class="mobile-menu" id="mobileMenu">
-  <a href="#home" onclick="closeMenu()">Home</a>
-  <a href="#precast" onclick="closeMenu()">Precast</a>
-  <a href="#solutions" onclick="closeMenu()">Solutions</a>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <div class="mobile-menu-group">
+    <a href="#solutions" onclick="closeMenu()">Services</a>
+    <a href="https://mth-mv.com/pools/" onclick="closeMenu()" class="mobile-sub-link">Swimming Pools</a>
+    <a href="https://mth-mv.com/concrete-repair-rehabilitation" onclick="closeMenu()" class="mobile-sub-link">Concrete Repair &amp; Rehabilitation</a>
+  </div>
   <a href="#projects" onclick="closeMenu()">Projects</a>
-  <a href="https://www.mth-mv.com/workshop" onclick="closeMenu()">Workshop</a>
-  <a href="https://www.mth-mv.com/workshop#capabilities" onclick="closeMenu()" style="padding-left:42px;font-size:0.78rem;">Capabilities</a>
-  <a href="https://www.mth-mv.com/workshop#for-sale" onclick="closeMenu()" style="padding-left:42px;font-size:0.78rem;">Equipment For Sale</a>
-  <a href="https://www.mth-mv.com/workshop#spare-parts" onclick="closeMenu()" style="padding-left:42px;font-size:0.78rem;">Spare Parts for Sale</a>
+  <div class="mobile-menu-group">
+    <a href="https://www.mth-mv.com/workshop" onclick="closeMenu()">Workshop</a>
+    <a href="https://www.mth-mv.com/workshop#capabilities" onclick="closeMenu()" class="mobile-sub-link">Capabilities</a>
+    <a href="https://www.mth-mv.com/workshop#for-sale" onclick="closeMenu()" class="mobile-sub-link">Equipment For Sale</a>
+    <a href="https://www.mth-mv.com/workshop#spare-parts" onclick="closeMenu()" class="mobile-sub-link">Spare Parts for Sale</a>
+  </div>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </nav>
 
